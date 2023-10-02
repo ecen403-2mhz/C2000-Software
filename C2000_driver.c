@@ -22,8 +22,9 @@ void main(void)
     ERTM;  // Enable Global realtime interrupt DBGM
 
     // Toggle GPIO immediately upon startup
-    GpioDataRegs.GPATOGGLE.bit.GPIO0 = 1;
+    GpioDataRegs.GPATOGGLE.bit.GPIO0 = 1; 
 
+    
     while (1)
     {
         // loop indefinitely
