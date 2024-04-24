@@ -1,0 +1,150 @@
+//#############################################################################
+//
+// FILE:   llc_clatask.cla
+//
+// TITLE:  CLA Task file
+//
+//#############################################################################
+// $TI Release: TIDA_010062 v2.02.00.00 $
+// $Release Date: Sat Oct  7 00:10:48 CDT 2023 $
+// Copyright: 2022 Texas Instruments Incorporated - http://www.ti.com/
+// * ALL RIGHTS RESERVED*
+//#############################################################################
+
+#define INTERRUPT_H
+#include "llc.h"
+
+#if LLC_CONTROL_RUNNING_ON==CLA_CORE
+    #ifdef BANK1
+
+    // With --lfu_default=preserve, if "update" attribute is specified
+    // on new variables, RTS lib does warm init of new variables
+    // if "update" attribute is not specified on new variables,
+    // RTS lib does not do warm init of new variables
+
+    #endif
+#endif
+
+//
+// Task 1 - Title Here
+//
+// Description: Description/steps here.
+//
+//-----------------------------------------------------------------------------
+//
+__attribute__((interrupt))  void Cla1Task1 ( void )
+{
+    #if(CLA_DEBUG == 1)
+    __mdebugstop();
+    #endif
+
+#if LLC_CONTROL_RUNNING_ON==CLA_CORE
+    isr1Ticker++;
+#ifdef LFU
+    #ifdef BANK0
+        LLC_HAL_setProfilingGPIO1();     // Set GPIO high when entering ISR
+        LLC_runISR1();
+        LLC_runISR1();                   // Run ISR routine
+	    LLC_HAL_acknowledgeInterrupt();  // Clear pending interrupt flags
+	    LLC_HAL_clearProfilingGPIO1();   // Clear GPIO when exiting the ISR
+	#endif
+	#ifdef BANK1
+	    LLC_HAL_setProfilingGPIO1();     // Set GPIO high when entering ISR
+	    LLC_runISR1();
+	    LLC_runISR1();                   // Run ISR routine
+	    LLC_HAL_acknowledgeInterrupt();  // Clear pending interrupt flags
+	    LLC_HAL_clearProfilingGPIO1();   // Clear GPIO when exiting the ISR
+    #endif
+#else
+    LLC_HAL_setProfilingGPIO1();     // Set GPIO high when entering ISR
+    LLC_runISR1();                   // Run ISR routine
+    LLC_HAL_acknowledgeInterrupt();  // Clear pending interrupt flags
+    LLC_HAL_clearProfilingGPIO1();   // Clear GPIO when exiting the ISR
+#endif
+
+#endif
+    #if(CLA_DEBUG == 1)
+        __mdebugstop();
+    #endif
+
+}
+
+//-----------------------------------------------------------------------------
+//
+// Background Task
+//
+// Description: This is just a dummy task that sets and resets GPIO48.
+// It is triggered by Timer0.
+// Note the following from the Potenza TRM:
+// "CPU-Timer Overflow Flag.
+// TIF indicates whether a timer overflow has happened since TIF was
+// last cleared. TIF is not cleared automatically and does not need to
+// be cleared to enable the next timer interrupt."
+// So the interrupt does not need to be cleared by the CLA ISR
+//
+//-----------------------------------------------------------------------------
+//
+__attribute__((interrupt("background")))  void Cla1BackgroundTask ( void )
+{
+    #if(CLA_DEBUG == 1)
+    __mdebugstop();
+    #endif
+
+    #if LLC_CONTROL_RUNNING_ON==CLA_CORE
+
+        #ifdef SW_TRIG_CLA_BGND_TASK
+            while(1)
+            {
+        #endif
+
+        #ifdef BANK0
+            LLC_HAL_setProfilingGPIO3();
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            LLC_HAL_resetProfilingGPIO3();
+        #endif
+
+        #ifdef BANK1
+            LLC_HAL_setProfilingGPIO3();
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            asm(" MNOP");
+            LLC_HAL_resetProfilingGPIO3();
+        #endif
+
+        #ifdef SW_TRIG_CLA_BGND_TASK
+            }
+        #endif
+
+    #endif
+}
+
+
+//
+// End of File
+//

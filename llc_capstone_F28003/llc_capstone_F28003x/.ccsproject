@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVariant value="0:Eclipse-based"/>
+	<ccsVersion value="12.4.0"/>
+	<deviceVariant value="TMS320C28XX.TMS320F280039C"/>
+	<deviceFamily value="C2000"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="22.6.0.LTS"/>
+	<isElfFormat value="true"/>
+	<rts value="libc.a"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=llc_nonpowerSUITE.projectspec.llc_nonpowerSUITE_F28003x"/>
+	<sourceLookupPath value="${DRIVER_LIB}"/>
+	<origin value="/Users/rohanlingala/ti/C2000Ware_DigitalPower_SDK_5_00_01_00/solutions/tida_010062/f28003x/ccs/llc_nonpowerSUITE.projectspec"/>
+	<filesToOpen value=""/>
+	<connection value="common/targetdb/connections/TIXDS110_Connection.xml"/>
+	<isTargetManual value="false"/>
+</projectOptions>

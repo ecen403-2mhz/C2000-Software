@@ -1,0 +1,1694 @@
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.1.LTS *
+       3              ;* Date/Time created: Thu Mar 28 17:35:22 2024                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=eabi --cla_support=cla2 --diag_wrap=off --float_support=fpu32 --hll_source=on --
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("../device/device.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.1.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\R
+      13              
+      14              $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                      .dwattr $C$DW$1, DW_AT_name("Flash_initModule")
+      16                      .dwattr $C$DW$1, DW_AT_linkage_name("Flash_initModule")
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19                      .dwattr $C$DW$1, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/d
+      20                      .dwattr $C$DW$1, DW_AT_decl_line(0x66f)
+      21                      .dwattr $C$DW$1, DW_AT_decl_column(0x01)
+      22              $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      23                      .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$34)
+      24              
+      25              $C$DW$3 .dwtag  DW_TAG_formal_parameter
+      26                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$34)
+      27              
+      28              $C$DW$4 .dwtag  DW_TAG_formal_parameter
+      29                      .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$36)
+      30              
+      31                      .dwendtag $C$DW$1
+      32              
+      33              
+      34              $C$DW$5 .dwtag  DW_TAG_subprogram
+      35                      .dwattr $C$DW$5, DW_AT_name("GPIO_setAnalogMode")
+      36                      .dwattr $C$DW$5, DW_AT_linkage_name("GPIO_setAnalogMode")
+      37                      .dwattr $C$DW$5, DW_AT_declaration
+      38                      .dwattr $C$DW$5, DW_AT_external
+      39                      .dwattr $C$DW$5, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/d
+      40                      .dwattr $C$DW$5, DW_AT_decl_line(0x42c)
+      41                      .dwattr $C$DW$5, DW_AT_decl_column(0x01)
+      42              $C$DW$6 .dwtag  DW_TAG_formal_parameter
+      43                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$34)
+      44              
+      45              $C$DW$7 .dwtag  DW_TAG_formal_parameter
+      46                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$26)
+      47              
+      48                      .dwendtag $C$DW$5
+      49              
+      50              $C$DW$8 .dwtag  DW_TAG_variable
+      51                      .dwattr $C$DW$8, DW_AT_name("RamfuncsLoadStart")
+      52                      .dwattr $C$DW$8, DW_AT_linkage_name("RamfuncsLoadStart")
+      53                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$36)
+      54                      .dwattr $C$DW$8, DW_AT_declaration
+      55                      .dwattr $C$DW$8, DW_AT_external
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE    2
+
+      56                      .dwattr $C$DW$8, DW_AT_decl_file("..\device\device.h")
+      57                      .dwattr $C$DW$8, DW_AT_decl_line(0xdd)
+      58                      .dwattr $C$DW$8, DW_AT_decl_column(0x11)
+      59              
+      60              $C$DW$9 .dwtag  DW_TAG_variable
+      61                      .dwattr $C$DW$9, DW_AT_name("RamfuncsLoadSize")
+      62                      .dwattr $C$DW$9, DW_AT_linkage_name("RamfuncsLoadSize")
+      63                      .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$36)
+      64                      .dwattr $C$DW$9, DW_AT_declaration
+      65                      .dwattr $C$DW$9, DW_AT_external
+      66                      .dwattr $C$DW$9, DW_AT_decl_file("..\device\device.h")
+      67                      .dwattr $C$DW$9, DW_AT_decl_line(0xdf)
+      68                      .dwattr $C$DW$9, DW_AT_decl_column(0x11)
+      69              
+      70              $C$DW$10        .dwtag  DW_TAG_variable
+      71                      .dwattr $C$DW$10, DW_AT_name("RamfuncsRunStart")
+      72                      .dwattr $C$DW$10, DW_AT_linkage_name("RamfuncsRunStart")
+      73                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$36)
+      74                      .dwattr $C$DW$10, DW_AT_declaration
+      75                      .dwattr $C$DW$10, DW_AT_external
+      76                      .dwattr $C$DW$10, DW_AT_decl_file("..\device\device.h")
+      77                      .dwattr $C$DW$10, DW_AT_decl_line(0xe0)
+      78                      .dwattr $C$DW$10, DW_AT_decl_column(0x11)
+      79              
+      80              $C$DW$11        .dwtag  DW_TAG_variable
+      81                      .dwattr $C$DW$11, DW_AT_name("isrcodefuncsLoadStart")
+      82                      .dwattr $C$DW$11, DW_AT_linkage_name("isrcodefuncsLoadStart")
+      83                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$36)
+      84                      .dwattr $C$DW$11, DW_AT_declaration
+      85                      .dwattr $C$DW$11, DW_AT_external
+      86                      .dwattr $C$DW$11, DW_AT_decl_file("..\device\device.h")
+      87                      .dwattr $C$DW$11, DW_AT_decl_line(0xe4)
+      88                      .dwattr $C$DW$11, DW_AT_decl_column(0x11)
+      89              
+      90              $C$DW$12        .dwtag  DW_TAG_variable
+      91                      .dwattr $C$DW$12, DW_AT_name("isrcodefuncsLoadSize")
+      92                      .dwattr $C$DW$12, DW_AT_linkage_name("isrcodefuncsLoadSize")
+      93                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$36)
+      94                      .dwattr $C$DW$12, DW_AT_declaration
+      95                      .dwattr $C$DW$12, DW_AT_external
+      96                      .dwattr $C$DW$12, DW_AT_decl_file("..\device\device.h")
+      97                      .dwattr $C$DW$12, DW_AT_decl_line(0xe6)
+      98                      .dwattr $C$DW$12, DW_AT_decl_column(0x11)
+      99              
+     100              $C$DW$13        .dwtag  DW_TAG_variable
+     101                      .dwattr $C$DW$13, DW_AT_name("isrcodefuncsRunStart")
+     102                      .dwattr $C$DW$13, DW_AT_linkage_name("isrcodefuncsRunStart")
+     103                      .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$36)
+     104                      .dwattr $C$DW$13, DW_AT_declaration
+     105                      .dwattr $C$DW$13, DW_AT_external
+     106                      .dwattr $C$DW$13, DW_AT_decl_file("..\device\device.h")
+     107                      .dwattr $C$DW$13, DW_AT_decl_line(0xe7)
+     108                      .dwattr $C$DW$13, DW_AT_decl_column(0x11)
+     109              
+     110              
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE    3
+
+     111              $C$DW$14        .dwtag  DW_TAG_subprogram
+     112                      .dwattr $C$DW$14, DW_AT_name("SysCtl_setClock")
+     113                      .dwattr $C$DW$14, DW_AT_linkage_name("SysCtl_setClock")
+     114                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$55)
+     115                      .dwattr $C$DW$14, DW_AT_declaration
+     116                      .dwattr $C$DW$14, DW_AT_external
+     117                      .dwattr $C$DW$14, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     118                      .dwattr $C$DW$14, DW_AT_decl_line(0xe77)
+     119                      .dwattr $C$DW$14, DW_AT_decl_column(0x01)
+     120              $C$DW$15        .dwtag  DW_TAG_formal_parameter
+     121                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$34)
+     122              
+     123                      .dwendtag $C$DW$14
+     124              
+     125              
+     126              $C$DW$16        .dwtag  DW_TAG_subprogram
+     127                      .dwattr $C$DW$16, DW_AT_name("__eallow")
+     128                      .dwattr $C$DW$16, DW_AT_linkage_name("__eallow")
+     129                      .dwattr $C$DW$16, DW_AT_declaration
+     130                      .dwattr $C$DW$16, DW_AT_external
+     131                      .dwendtag $C$DW$16
+     132              
+     133              
+     134              $C$DW$17        .dwtag  DW_TAG_subprogram
+     135                      .dwattr $C$DW$17, DW_AT_name("__edis")
+     136                      .dwattr $C$DW$17, DW_AT_linkage_name("__edis")
+     137                      .dwattr $C$DW$17, DW_AT_declaration
+     138                      .dwattr $C$DW$17, DW_AT_external
+     139                      .dwendtag $C$DW$17
+     140              
+     141              ;       C:\ti\ccs1250\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\bin\opt2000.exe C:\\Users\\Joel9\\AppData\\L
+     142              ;       C:\ti\ccs1250\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\bin\acia2000.exe -@C:\\Users\\Joel9\\AppData
+     143 00000000               .sect   ".text:__error__"
+     144                      .clink
+     145                      .global ||__error__||
+     146              
+     147              $C$DW$18        .dwtag  DW_TAG_subprogram
+     148                      .dwattr $C$DW$18, DW_AT_name("__error__")
+     149                      .dwattr $C$DW$18, DW_AT_low_pc(||__error__||)
+     150                      .dwattr $C$DW$18, DW_AT_high_pc(0x00)
+     151                      .dwattr $C$DW$18, DW_AT_linkage_name("__error__")
+     152                      .dwattr $C$DW$18, DW_AT_external
+     153                      .dwattr $C$DW$18, DW_AT_decl_file("../device/device.c")
+     154                      .dwattr $C$DW$18, DW_AT_decl_line(0xf3)
+     155                      .dwattr $C$DW$18, DW_AT_decl_column(0x06)
+     156                      .dwattr $C$DW$18, DW_AT_TI_max_frame_size(-2)
+     157                      .dwpsn  file "../device/device.c",line 244,column 1,is_stmt,address ||__error__||,isa 0
+     158              
+     159                      .dwfde $C$DW$CIE, ||__error__||
+     160              $C$DW$19        .dwtag  DW_TAG_formal_parameter
+     161                      .dwattr $C$DW$19, DW_AT_name("filename")
+     162                      .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$44)
+     163                      .dwattr $C$DW$19, DW_AT_location[DW_OP_reg12]
+     164              
+     165              $C$DW$20        .dwtag  DW_TAG_formal_parameter
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE    4
+
+     166                      .dwattr $C$DW$20, DW_AT_name("line")
+     167                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$34)
+     168                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg0]
+     169              
+     170              
+     171              ;***************************************************************
+     172              ;* FNAME: __error__                     FR SIZE:   0           *
+     173              ;*                                                             *
+     174              ;* FUNCTION ENVIRONMENT                                        *
+     175              ;*                                                             *
+     176              ;* FUNCTION PROPERTIES                                         *
+     177              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     178              ;***************************************************************
+     179              
+     180 00000000       ||__error__||:
+     181                      .dwcfi  cfa_offset, -2
+     182                      .dwcfi  save_reg_to_mem, 26, 0
+     183 00000000 7625   ESTOP0
+     184 00000001 FF69          SPM       #0                    ; [CPU_ALU] 
+     185              $C$DW$21        .dwtag  DW_TAG_TI_branch
+     186                      .dwattr $C$DW$21, DW_AT_low_pc(0x00)
+     187                      .dwattr $C$DW$21, DW_AT_TI_return
+     188              
+     189 00000002 0006          LRETR     ; [CPU_ALU] 
+     190                      ; return occurs ; [] 
+     191                      .dwattr $C$DW$18, DW_AT_TI_end_file("../device/device.c")
+     192                      .dwattr $C$DW$18, DW_AT_TI_end_line(0xfa)
+     193                      .dwattr $C$DW$18, DW_AT_TI_end_column(0x01)
+     194                      .dwendentry
+     195                      .dwendtag $C$DW$18
+     196              
+     197 00000000               .sect   ".text:Device_initGPIO"
+     198                      .clink
+     199                      .global ||Device_initGPIO||
+     200              
+     201              $C$DW$22        .dwtag  DW_TAG_subprogram
+     202                      .dwattr $C$DW$22, DW_AT_name("Device_initGPIO")
+     203                      .dwattr $C$DW$22, DW_AT_low_pc(||Device_initGPIO||)
+     204                      .dwattr $C$DW$22, DW_AT_high_pc(0x00)
+     205                      .dwattr $C$DW$22, DW_AT_linkage_name("Device_initGPIO")
+     206                      .dwattr $C$DW$22, DW_AT_external
+     207                      .dwattr $C$DW$22, DW_AT_decl_file("../device/device.c")
+     208                      .dwattr $C$DW$22, DW_AT_decl_line(0xe4)
+     209                      .dwattr $C$DW$22, DW_AT_decl_column(0x06)
+     210                      .dwattr $C$DW$22, DW_AT_TI_max_frame_size(-2)
+     211                      .dwpsn  file "../device/device.c",line 229,column 1,is_stmt,address ||Device_initGPIO||,isa 0
+     212              
+     213                      .dwfde $C$DW$CIE, ||Device_initGPIO||
+     214              
+     215              ;***************************************************************
+     216              ;* FNAME: Device_initGPIO               FR SIZE:   0           *
+     217              ;*                                                             *
+     218              ;* FUNCTION ENVIRONMENT                                        *
+     219              ;*                                                             *
+     220              ;* FUNCTION PROPERTIES                                         *
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE    5
+
+     221              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     222              ;***************************************************************
+     223              
+     224 00000000       ||Device_initGPIO||:
+     225                      .dwcfi  cfa_offset, -2
+     226                      .dwcfi  save_reg_to_mem, 26, 0
+     227                      .dwpsn  file "C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/device/driverlib/gpio
+     228 00000000 7622          EALLOW    ; [CPU_ALU] |796| 
+     229                      .dwpsn  file "C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/device/driverlib/gpio
+     230 00000001 BFA9          MOV32     ACC,*(0:0x7c3c)       ; [CPU_FPU] |797| 
+         00000002 7C3C 
+     231 00000003 0200          MOVB      ACC,#0                ; [CPU_ALU] |797| 
+     232 00000004 BDA9          MOV32     *(0:0x7c3c),ACC       ; [CPU_FPU] |797| 
+         00000005 7C3C 
+     233 00000006 BFA6          MOV32     XAR6,*(0:0x7c7c)      ; [CPU_FPU] |797| 
+         00000007 7C7C 
+     234 00000008 BDA9          MOV32     *(0:0x7c7c),ACC       ; [CPU_FPU] |797| 
+         00000009 7C7C 
+     235 0000000a BFA6          MOV32     XAR6,*(0:0x7dfc)      ; [CPU_FPU] |797| 
+         0000000b 7DFC 
+     236 0000000c BDA9          MOV32     *(0:0x7dfc),ACC       ; [CPU_FPU] |797| 
+         0000000d 7DFC 
+     237                      .dwpsn  file "C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/device/driverlib/gpio
+     238 0000000e 761A          EDIS      ; [CPU_ALU] |798| 
+     239              $C$DW$23        .dwtag  DW_TAG_TI_branch
+     240                      .dwattr $C$DW$23, DW_AT_low_pc(0x00)
+     241                      .dwattr $C$DW$23, DW_AT_TI_return
+     242              
+     243 0000000f 0006          LRETR     ; [CPU_ALU] 
+     244                      ; return occurs ; [] 
+     245                      .dwattr $C$DW$22, DW_AT_TI_end_file("../device/device.c")
+     246                      .dwattr $C$DW$22, DW_AT_TI_end_line(0xec)
+     247                      .dwattr $C$DW$22, DW_AT_TI_end_column(0x01)
+     248                      .dwendentry
+     249                      .dwendtag $C$DW$22
+     250              
+     251 00000000               .sect   ".text:Device_enableAllPeripherals"
+     252                      .clink
+     253                      .global ||Device_enableAllPeripherals||
+     254              
+     255              $C$DW$24        .dwtag  DW_TAG_subprogram
+     256                      .dwattr $C$DW$24, DW_AT_name("Device_enableAllPeripherals")
+     257                      .dwattr $C$DW$24, DW_AT_low_pc(||Device_enableAllPeripherals||)
+     258                      .dwattr $C$DW$24, DW_AT_high_pc(0x00)
+     259                      .dwattr $C$DW$24, DW_AT_linkage_name("Device_enableAllPeripherals")
+     260                      .dwattr $C$DW$24, DW_AT_external
+     261                      .dwattr $C$DW$24, DW_AT_decl_file("../device/device.c")
+     262                      .dwattr $C$DW$24, DW_AT_decl_line(0x92)
+     263                      .dwattr $C$DW$24, DW_AT_decl_column(0x06)
+     264                      .dwattr $C$DW$24, DW_AT_TI_max_frame_size(-2)
+     265                      .dwpsn  file "../device/device.c",line 147,column 1,is_stmt,address ||Device_enableAllPeripherals||,i
+     266              
+     267                      .dwfde $C$DW$CIE, ||Device_enableAllPeripherals||
+     268              
+     269              ;***************************************************************
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE    6
+
+     270              ;* FNAME: Device_enableAllPeripherals   FR SIZE:   0           *
+     271              ;*                                                             *
+     272              ;* FUNCTION ENVIRONMENT                                        *
+     273              ;*                                                             *
+     274              ;* FUNCTION PROPERTIES                                         *
+     275              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     276              ;***************************************************************
+     277              
+     278 00000000       ||Device_enableAllPeripherals||:
+     279                      .dwcfi  cfa_offset, -2
+     280                      .dwcfi  save_reg_to_mem, 26, 0
+     281                      .dwpsn  file "C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\device\driverlib\sysc
+     282 00000000 7622          EALLOW    ; [CPU_ALU] |947| 
+     283                      .dwpsn  file "C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\device\driverlib\sysc
+     284 00000001 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     285 00000002 8F05          MOVL      XAR4,#381730          ; [CPU_ARAU] |952| 
+         00000003 D322 
+     286 00000004 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     287 00000005 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     288 00000006 0204          MOVB      ACC,#4                ; [CPU_ALU] |952| 
+     289 00000007 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     290 00000008 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     291 00000009 0208          MOVB      ACC,#8                ; [CPU_ALU] |952| 
+     292 0000000a 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     293 0000000b 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     294 0000000c 0210          MOVB      ACC,#16               ; [CPU_ALU] |952| 
+     295 0000000d 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     296 0000000e 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     297 0000000f 0220          MOVB      ACC,#32               ; [CPU_ALU] |952| 
+     298 00000010 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     299 00000011 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     300 00000012 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |952| 
+     301 00000013 1AA9          OR        AL,#8192              ; [CPU_ALU] |952| 
+         00000014 2000 
+     302 00000015 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |952| 
+     303 00000016 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |952| 
+     304 00000017 1AA9          OR        AL,#16384             ; [CPU_ALU] |952| 
+         00000018 4000 
+     305 00000019 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |952| 
+     306 0000001a 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |952| 
+     307 0000001b 5101          OR        AH,#1                 ; [CPU_ALU] |952| 
+     308 0000001c 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |952| 
+     309 0000001d 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |952| 
+     310 0000001e 5104          OR        AH,#4                 ; [CPU_ALU] |952| 
+     311 0000001f 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |952| 
+     312 00000020 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |952| 
+     313 00000021 1AA8          OR        AH,#256               ; [CPU_ALU] |952| 
+         00000022 0100 
+     314 00000023 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |952| 
+     315 00000024 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     316 00000025 8F05          MOVL      XAR4,#381734          ; [CPU_ARAU] |952| 
+         00000026 D326 
+     317 00000027 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     318 00000028 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     319 00000029 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE    7
+
+     320 0000002a 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     321 0000002b 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     322 0000002c 0204          MOVB      ACC,#4                ; [CPU_ALU] |952| 
+     323 0000002d 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     324 0000002e 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     325 0000002f 0208          MOVB      ACC,#8                ; [CPU_ALU] |952| 
+     326 00000030 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     327 00000031 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     328 00000032 0210          MOVB      ACC,#16               ; [CPU_ALU] |952| 
+     329 00000033 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     330 00000034 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     331 00000035 0220          MOVB      ACC,#32               ; [CPU_ALU] |952| 
+     332 00000036 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     333 00000037 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     334 00000038 0240          MOVB      ACC,#64               ; [CPU_ALU] |952| 
+     335 00000039 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     336 0000003a 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     337 0000003b 0280          MOVB      ACC,#128              ; [CPU_ALU] |952| 
+     338 0000003c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     339 0000003d 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     340 0000003e 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     341 0000003f 8F05          MOVL      XAR4,#381736          ; [CPU_ARAU] |952| 
+         00000040 D328 
+     342 00000041 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     343 00000042 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     344 00000043 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     345 00000044 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     346 00000045 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     347 00000046 0204          MOVB      ACC,#4                ; [CPU_ALU] |952| 
+     348 00000047 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     349 00000048 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     350 00000049 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     351 0000004a 8F05          MOVL      XAR4,#381738          ; [CPU_ARAU] |952| 
+         0000004b D32A 
+     352 0000004c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     353 0000004d 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     354 0000004e 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     355 0000004f 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     356 00000050 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     357 00000051 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     358 00000052 8F05          MOVL      XAR4,#381742          ; [CPU_ARAU] |952| 
+         00000053 D32E 
+     359 00000054 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     360 00000055 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     361 00000056 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     362 00000057 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     363 00000058 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     364 00000059 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     365 0000005a 8F05          MOVL      XAR4,#381744          ; [CPU_ARAU] |952| 
+         0000005b D330 
+     366 0000005c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     367 0000005d 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     368 0000005e 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     369 0000005f 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     370 00000060 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE    8
+
+     371 00000061 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     372 00000062 8F05          MOVL      XAR4,#381746          ; [CPU_ARAU] |952| 
+         00000063 D332 
+     373 00000064 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     374 00000065 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     375 00000066 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     376 00000067 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     377 00000068 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     378 00000069 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     379 0000006a 8F05          MOVL      XAR4,#381748          ; [CPU_ARAU] |952| 
+         0000006b D334 
+     380 0000006c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     381 0000006d 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     382 0000006e 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     383 0000006f 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     384 00000070 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     385 00000071 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     386 00000072 8F05          MOVL      XAR4,#381750          ; [CPU_ARAU] |952| 
+         00000073 D336 
+     387 00000074 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     388 00000075 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     389 00000076 0210          MOVB      ACC,#16               ; [CPU_ALU] |952| 
+     390 00000077 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     391 00000078 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     392 00000079 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     393 0000007a 8F05          MOVL      XAR4,#381756          ; [CPU_ARAU] |952| 
+         0000007b D33C 
+     394 0000007c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     395 0000007d 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     396 0000007e 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     397 0000007f 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     398 00000080 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     399 00000081 0204          MOVB      ACC,#4                ; [CPU_ALU] |952| 
+     400 00000082 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     401 00000083 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     402 00000084 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     403 00000085 8F05          MOVL      XAR4,#381758          ; [CPU_ARAU] |952| 
+         00000086 D33E 
+     404 00000087 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     405 00000088 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     406 00000089 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     407 0000008a 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     408 0000008b 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     409 0000008c 0204          MOVB      ACC,#4                ; [CPU_ALU] |952| 
+     410 0000008d 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     411 0000008e 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     412 0000008f 0208          MOVB      ACC,#8                ; [CPU_ALU] |952| 
+     413 00000090 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     414 00000091 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     415 00000092 8F05          MOVL      XAR4,#381762          ; [CPU_ARAU] |952| 
+         00000093 D342 
+     416 00000094 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |952| 
+     417 00000095 5101          OR        AH,#1                 ; [CPU_ALU] |952| 
+     418 00000096 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |952| 
+     419 00000097 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |952| 
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE    9
+
+     420 00000098 5102          OR        AH,#2                 ; [CPU_ALU] |952| 
+     421 00000099 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |952| 
+     422 0000009a 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     423 0000009b 8F05          MOVL      XAR4,#381764          ; [CPU_ARAU] |952| 
+         0000009c D344 
+     424 0000009d 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     425 0000009e 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     426 0000009f 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     427 000000a0 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     428 000000a1 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     429 000000a2 0204          MOVB      ACC,#4                ; [CPU_ALU] |952| 
+     430 000000a3 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     431 000000a4 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     432 000000a5 0208          MOVB      ACC,#8                ; [CPU_ALU] |952| 
+     433 000000a6 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     434 000000a7 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     435 000000a8 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     436 000000a9 8F05          MOVL      XAR4,#381766          ; [CPU_ARAU] |952| 
+         000000aa D346 
+     437 000000ab 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     438 000000ac 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     439 000000ad 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     440 000000ae 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     441 000000af 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     442 000000b0 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     443 000000b1 8F05          MOVL      XAR4,#381768          ; [CPU_ARAU] |952| 
+         000000b2 D348 
+     444 000000b3 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     445 000000b4 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     446 000000b5 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     447 000000b6 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     448 000000b7 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     449 000000b8 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     450 000000b9 8F05          MOVL      XAR4,#381770          ; [CPU_ARAU] |952| 
+         000000ba D34A 
+     451 000000bb 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     452 000000bc 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     453 000000bd 8F05          MOVL      XAR4,#381772          ; [CPU_ARAU] |952| 
+         000000be D34C 
+     454 000000bf 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     455 000000c0 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     456 000000c1 0202          MOVB      ACC,#2                ; [CPU_ALU] |952| 
+     457 000000c2 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     458 000000c3 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     459 000000c4 0201          MOVB      ACC,#1                ; [CPU_ALU] |952| 
+     460 000000c5 8F05          MOVL      XAR4,#381780          ; [CPU_ARAU] |952| 
+         000000c6 D354 
+     461 000000c7 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     462 000000c8 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     463 000000c9 8F05          MOVL      XAR4,#381782          ; [CPU_ARAU] |952| 
+         000000ca D356 
+     464 000000cb 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     465 000000cc 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     466 000000cd 8F05          MOVL      XAR4,#381784          ; [CPU_ARAU] |952| 
+         000000ce D358 
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   10
+
+     467 000000cf 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |952| 
+     468 000000d0 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |952| 
+     469                      .dwpsn  file "C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\device\driverlib\sysc
+     470 000000d1 761A          EDIS      ; [CPU_ALU] |953| 
+     471              $C$DW$25        .dwtag  DW_TAG_TI_branch
+     472                      .dwattr $C$DW$25, DW_AT_low_pc(0x00)
+     473                      .dwattr $C$DW$25, DW_AT_TI_return
+     474              
+     475 000000d2 0006          LRETR     ; [CPU_ALU] 
+     476                      ; return occurs ; [] 
+     477                      .dwattr $C$DW$24, DW_AT_TI_end_file("../device/device.c")
+     478                      .dwattr $C$DW$24, DW_AT_TI_end_line(0xdd)
+     479                      .dwattr $C$DW$24, DW_AT_TI_end_column(0x01)
+     480                      .dwendentry
+     481                      .dwendtag $C$DW$24
+     482              
+     483 00000000               .sect   ".text:Device_init"
+     484                      .clink
+     485                      .global ||Device_init||
+     486              
+     487              $C$DW$26        .dwtag  DW_TAG_subprogram
+     488                      .dwattr $C$DW$26, DW_AT_name("Device_init")
+     489                      .dwattr $C$DW$26, DW_AT_low_pc(||Device_init||)
+     490                      .dwattr $C$DW$26, DW_AT_high_pc(0x00)
+     491                      .dwattr $C$DW$26, DW_AT_linkage_name("Device_init")
+     492                      .dwattr $C$DW$26, DW_AT_external
+     493                      .dwattr $C$DW$26, DW_AT_decl_file("../device/device.c")
+     494                      .dwattr $C$DW$26, DW_AT_decl_line(0x3d)
+     495                      .dwattr $C$DW$26, DW_AT_decl_column(0x06)
+     496                      .dwattr $C$DW$26, DW_AT_TI_max_frame_size(-4)
+     497                      .dwpsn  file "../device/device.c",line 62,column 1,is_stmt,address ||Device_init||,isa 0
+     498              
+     499                      .dwfde $C$DW$CIE, ||Device_init||
+     500              
+     501              ;***************************************************************
+     502              ;* FNAME: Device_init                   FR SIZE:   2           *
+     503              ;*                                                             *
+     504              ;* FUNCTION ENVIRONMENT                                        *
+     505              ;*                                                             *
+     506              ;* FUNCTION PROPERTIES                                         *
+     507              ;*                            2 Parameter,  0 Auto,  0 SOE     *
+     508              ;***************************************************************
+     509              
+     510 00000000       ||Device_init||:
+     511                      .dwcfi  cfa_offset, -2
+     512                      .dwcfi  save_reg_to_mem, 26, 0
+     513 00000000 FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
+     514                      .dwcfi  cfa_offset, -4
+     515                      .dwpsn  file "C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\device\driverlib\sysc
+     516 00000001 7622          EALLOW    ; [CPU_ALU] |1784| 
+     517                      .dwpsn  file "C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\device\driverlib\sysc
+     518 00000002 F5A9          MOV       AL,*(0:0x7029)        ; [CPU_ALU] |1789| 
+         00000003 7029 
+     519 00000004 5068          ORB       AL,#0x68              ; [CPU_ALU] |1789| 
+     520 00000005 F4A9          MOV       *(0:0x7029),AL        ; [CPU_ALU] |1789| 
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   11
+
+         00000006 7029 
+     521                      .dwpsn  file "C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\device\driverlib\sysc
+     522 00000007 761A          EDIS      ; [CPU_ALU] |1791| 
+     523                      .dwpsn  file "../device/device.c",line 76,column 5,is_stmt,isa 0
+     524 00000008 8F40!         MOVL      XAR5,#||RamfuncsLoadStart|| ; [CPU_ARAU] |76| 
+         00000009 0000 
+     525 0000000a 28A8!         MOV       AH,#$HI16(||RamfuncsLoadSize||) + 0 ; [CPU_ALU] |76| 
+         0000000b 0000 
+     526 0000000c 8F00!         MOVL      XAR4,#||RamfuncsRunStart|| ; [CPU_ARAU] |76| 
+         0000000d 0000 
+     527 0000000e 28A9!         MOV       AL,#$LO16(||RamfuncsLoadSize||) + 0 ; [CPU_ALU] |76| 
+         0000000f 0000 
+     528              $C$DW$27        .dwtag  DW_TAG_TI_branch
+     529                      .dwattr $C$DW$27, DW_AT_low_pc(0x00)
+     530                      .dwattr $C$DW$27, DW_AT_name("memcpy")
+     531                      .dwattr $C$DW$27, DW_AT_TI_call
+     532              
+     533 00000010 7640!         LCR       #||memcpy||           ; [CPU_ALU] |76| 
+         00000011 0000 
+     534                      ; call occurs [#||memcpy||] ; [] |76| 
+     535                      .dwpsn  file "../device/device.c",line 77,column 5,is_stmt,isa 0
+     536 00000012 28A9!         MOV       AL,#$LO16(||isrcodefuncsLoadSize||) + 0 ; [CPU_ALU] |77| 
+         00000013 0000 
+     537 00000014 28A8!         MOV       AH,#$HI16(||isrcodefuncsLoadSize||) + 0 ; [CPU_ALU] |77| 
+         00000015 0000 
+     538 00000016 8F40!         MOVL      XAR5,#||isrcodefuncsLoadStart|| ; [CPU_ARAU] |77| 
+         00000017 0000 
+     539 00000018 8F00!         MOVL      XAR4,#||isrcodefuncsRunStart|| ; [CPU_ARAU] |77| 
+         00000019 0000 
+     540              $C$DW$28        .dwtag  DW_TAG_TI_branch
+     541                      .dwattr $C$DW$28, DW_AT_low_pc(0x00)
+     542                      .dwattr $C$DW$28, DW_AT_name("memcpy")
+     543                      .dwattr $C$DW$28, DW_AT_TI_call
+     544              
+     545 0000001a 7640!         LCR       #||memcpy||           ; [CPU_ALU] |77| 
+         0000001b 0000 
+     546                      ; call occurs [#||memcpy||] ; [] |77| 
+     547                      .dwpsn  file "../device/device.c",line 84,column 5,is_stmt,isa 0
+     548 0000001c 8F05          MOVL      XAR4,#391936          ; [CPU_ARAU] |84| 
+         0000001d FB00 
+     549 0000001e 8F45          MOVL      XAR5,#391168          ; [CPU_ARAU] |84| 
+         0000001f F800 
+     550 00000020 A842          MOVL      *-SP[2],XAR4          ; [CPU_ALU] |84| 
+     551 00000021 A0A9          MOVL      ACC,XAR5              ; [CPU_ALU] |84| 
+     552 00000022 D405          MOVB      XAR4,#5               ; [CPU_ALU] |84| 
+     553              $C$DW$29        .dwtag  DW_TAG_TI_branch
+     554                      .dwattr $C$DW$29, DW_AT_low_pc(0x00)
+     555                      .dwattr $C$DW$29, DW_AT_name("Flash_initModule")
+     556                      .dwattr $C$DW$29, DW_AT_TI_call
+     557              
+     558 00000023 7640!         LCR       #||Flash_initModule|| ; [CPU_ALU] |84| 
+         00000024 0000 
+     559                      ; call occurs [#||Flash_initModule||] ; [] |84| 
+     560                      .dwpsn  file "../device/device.c",line 90,column 5,is_stmt,isa 0
+     561 00000025 28A9          MOV       AL,#304               ; [CPU_ALU] |90| 
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   12
+
+         00000026 0130 
+     562 00000027 28A8          MOV       AH,#33157             ; [CPU_ALU] |90| 
+         00000028 8185 
+     563              $C$DW$30        .dwtag  DW_TAG_TI_branch
+     564                      .dwattr $C$DW$30, DW_AT_low_pc(0x00)
+     565                      .dwattr $C$DW$30, DW_AT_name("SysCtl_setClock")
+     566                      .dwattr $C$DW$30, DW_AT_TI_call
+     567              
+     568 00000029 7640!         LCR       #||SysCtl_setClock||  ; [CPU_ALU] |90| 
+         0000002a 0000 
+     569                      ; call occurs [#||SysCtl_setClock||] ; [] |90| 
+     570                      .dwpsn  file "C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\device\driverlib\sysc
+     571 0000002b 7622          EALLOW    ; [CPU_ALU] |1147| 
+     572                      .dwpsn  file "C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\device\driverlib\sysc
+     573 0000002c 8F05          MOVL      XAR4,#381484          ; [CPU_ARAU] |1148| 
+         0000002d D22C 
+     574 0000002e 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |1148| 
+     575 0000002f 18A9          AND       AL,#65528             ; [CPU_ALU] |1148| 
+         00000030 FFF8 
+     576 00000031 5002          ORB       AL,#0x02              ; [CPU_ALU] |1148| 
+     577 00000032 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |1148| 
+     578                      .dwpsn  file "C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\device\driverlib\sysc
+     579 00000033 761A          EDIS      ; [CPU_ALU] |1151| 
+     580                      .dwpsn  file "../device/device.c",line 122,column 5,is_stmt,isa 0
+     581              $C$DW$31        .dwtag  DW_TAG_TI_branch
+     582                      .dwattr $C$DW$31, DW_AT_low_pc(0x00)
+     583                      .dwattr $C$DW$31, DW_AT_name("Device_enableAllPeripherals")
+     584                      .dwattr $C$DW$31, DW_AT_TI_call
+     585              
+     586 00000034 7640!         LCR       #||Device_enableAllPeripherals|| ; [CPU_ALU] |122| 
+         00000035 0000 
+     587                      ; call occurs [#||Device_enableAllPeripherals||] ; [] |122| 
+     588                      .dwpsn  file "C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/device/driverlib/asys
+     589 00000036 7622          EALLOW    ; [CPU_ALU] |658| 
+     590                      .dwpsn  file "C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/device/driverlib/asys
+     591 00000037 8F05          MOVL      XAR4,#382862          ; [CPU_ARAU] |663| 
+         00000038 D78E 
+     592 00000039 1AC4          OR        *+XAR4[0],#0x0200     ; [CPU_ALU] |663| 
+         0000003a 0200 
+     593                      .dwpsn  file "C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/device/driverlib/asys
+     594 0000003b 761A          EDIS      ; [CPU_ALU] |665| 
+     595                      .dwpsn  file "../device/device.c",line 134,column 5,is_stmt,isa 0
+     596 0000003c D400          MOVB      XAR4,#0               ; [CPU_ALU] |134| 
+     597 0000003d 0214          MOVB      ACC,#20               ; [CPU_ALU] |134| 
+     598              $C$DW$32        .dwtag  DW_TAG_TI_branch
+     599                      .dwattr $C$DW$32, DW_AT_low_pc(0x00)
+     600                      .dwattr $C$DW$32, DW_AT_name("GPIO_setAnalogMode")
+     601                      .dwattr $C$DW$32, DW_AT_TI_call
+     602              
+     603 0000003e 7640!         LCR       #||GPIO_setAnalogMode|| ; [CPU_ALU] |134| 
+         0000003f 0000 
+     604                      ; call occurs [#||GPIO_setAnalogMode||] ; [] |134| 
+     605                      .dwpsn  file "../device/device.c",line 135,column 5,is_stmt,isa 0
+     606 00000040 D400          MOVB      XAR4,#0               ; [CPU_ALU] |135| 
+     607 00000041 0215          MOVB      ACC,#21               ; [CPU_ALU] |135| 
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   13
+
+     608              $C$DW$33        .dwtag  DW_TAG_TI_branch
+     609                      .dwattr $C$DW$33, DW_AT_low_pc(0x00)
+     610                      .dwattr $C$DW$33, DW_AT_name("GPIO_setAnalogMode")
+     611                      .dwattr $C$DW$33, DW_AT_TI_call
+     612              
+     613 00000042 7640!         LCR       #||GPIO_setAnalogMode|| ; [CPU_ALU] |135| 
+         00000043 0000 
+     614                      ; call occurs [#||GPIO_setAnalogMode||] ; [] |135| 
+     615 00000044 FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
+     616                      .dwcfi  cfa_offset, -2
+     617              $C$DW$34        .dwtag  DW_TAG_TI_branch
+     618                      .dwattr $C$DW$34, DW_AT_low_pc(0x00)
+     619                      .dwattr $C$DW$34, DW_AT_TI_return
+     620              
+     621 00000045 0006          LRETR     ; [CPU_ALU] 
+     622                      ; return occurs ; [] 
+     623                      .dwattr $C$DW$26, DW_AT_TI_end_file("../device/device.c")
+     624                      .dwattr $C$DW$26, DW_AT_TI_end_line(0x88)
+     625                      .dwattr $C$DW$26, DW_AT_TI_end_column(0x01)
+     626                      .dwendentry
+     627                      .dwendtag $C$DW$26
+     628              
+     629              ;**************************************************************
+     630              ;* UNDEFINED EXTERNAL REFERENCES                              *
+     631              ;**************************************************************
+     632                      .global ||Flash_initModule||
+     633                      .global ||GPIO_setAnalogMode||
+     634                      .global ||RamfuncsLoadStart||
+     635                      .global ||RamfuncsLoadSize||
+     636                      .global ||RamfuncsRunStart||
+     637                      .global ||isrcodefuncsLoadStart||
+     638                      .global ||isrcodefuncsLoadSize||
+     639                      .global ||isrcodefuncsRunStart||
+     640                      .global ||SysCtl_setClock||
+     641                      .global ||memcpy||
+     642              
+     643              ;***************************************************************
+     644              ;* BUILD ATTRIBUTES                                            *
+     645              ;***************************************************************
+     646                      .battr "c28xabi", Tag_File, 1, Tag_float_args(0)
+     647                      .battr "c28xabi", Tag_File, 1, Tag_double_args(0)
+     648                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+     649              
+     650              ;***************************************************************
+     651              ;* DWARF CIE ENTRIES                                           *
+     652              ;***************************************************************
+     653              
+     654              $C$DW$CIE       .dwcie 26
+     655                      .dwcfi  cfa_register, 20
+     656                      .dwcfi  cfa_offset, 0
+     657                      .dwcfi  same_value, 28
+     658                      .dwcfi  same_value, 6
+     659                      .dwcfi  same_value, 7
+     660                      .dwcfi  same_value, 8
+     661                      .dwcfi  same_value, 9
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   14
+
+     662                      .dwcfi  same_value, 10
+     663                      .dwcfi  same_value, 11
+     664                      .dwcfi  same_value, 59
+     665                      .dwcfi  same_value, 63
+     666                      .dwcfi  same_value, 67
+     667                      .dwcfi  same_value, 71
+     668                      .dwendentry
+     669                      .dwendtag $C$DW$CU
+     670              
+     671              
+     672              ;***************************************************************
+     673              ;* TYPE INFORMATION                                            *
+     674              ;***************************************************************
+     675              
+     676              $C$DW$TU$19     .dwtag  DW_TAG_type_unit
+     677                      .dwmtype  $C$DW$T$19
+     678              
+     679              $C$DW$T$19      .dwtag  DW_TAG_enumeration_type
+     680                      .dwattr $C$DW$T$19, DW_AT_byte_size(0x01)
+     681              $C$DW$35        .dwtag  DW_TAG_enumerator
+     682                      .dwattr $C$DW$35, DW_AT_name("SYSCTL_PERIPH_CLK_CLA1")
+     683                      .dwattr $C$DW$35, DW_AT_const_value(0x00)
+     684                      .dwattr $C$DW$35, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     685                      .dwattr $C$DW$35, DW_AT_decl_line(0x13f)
+     686                      .dwattr $C$DW$35, DW_AT_decl_column(0x05)
+     687              
+     688              $C$DW$36        .dwtag  DW_TAG_enumerator
+     689                      .dwattr $C$DW$36, DW_AT_name("SYSCTL_PERIPH_CLK_DMA")
+     690                      .dwattr $C$DW$36, DW_AT_const_value(0x200)
+     691                      .dwattr $C$DW$36, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     692                      .dwattr $C$DW$36, DW_AT_decl_line(0x140)
+     693                      .dwattr $C$DW$36, DW_AT_decl_column(0x05)
+     694              
+     695              $C$DW$37        .dwtag  DW_TAG_enumerator
+     696                      .dwattr $C$DW$37, DW_AT_name("SYSCTL_PERIPH_CLK_TIMER0")
+     697                      .dwattr $C$DW$37, DW_AT_const_value(0x300)
+     698                      .dwattr $C$DW$37, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     699                      .dwattr $C$DW$37, DW_AT_decl_line(0x141)
+     700                      .dwattr $C$DW$37, DW_AT_decl_column(0x05)
+     701              
+     702              $C$DW$38        .dwtag  DW_TAG_enumerator
+     703                      .dwattr $C$DW$38, DW_AT_name("SYSCTL_PERIPH_CLK_TIMER1")
+     704                      .dwattr $C$DW$38, DW_AT_const_value(0x400)
+     705                      .dwattr $C$DW$38, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     706                      .dwattr $C$DW$38, DW_AT_decl_line(0x142)
+     707                      .dwattr $C$DW$38, DW_AT_decl_column(0x05)
+     708              
+     709              $C$DW$39        .dwtag  DW_TAG_enumerator
+     710                      .dwattr $C$DW$39, DW_AT_name("SYSCTL_PERIPH_CLK_TIMER2")
+     711                      .dwattr $C$DW$39, DW_AT_const_value(0x500)
+     712                      .dwattr $C$DW$39, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     713                      .dwattr $C$DW$39, DW_AT_decl_line(0x143)
+     714                      .dwattr $C$DW$39, DW_AT_decl_column(0x05)
+     715              
+     716              $C$DW$40        .dwtag  DW_TAG_enumerator
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   15
+
+     717                      .dwattr $C$DW$40, DW_AT_name("SYSCTL_PERIPH_CLK_CPUBGCRC")
+     718                      .dwattr $C$DW$40, DW_AT_const_value(0xd00)
+     719                      .dwattr $C$DW$40, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     720                      .dwattr $C$DW$40, DW_AT_decl_line(0x144)
+     721                      .dwattr $C$DW$40, DW_AT_decl_column(0x05)
+     722              
+     723              $C$DW$41        .dwtag  DW_TAG_enumerator
+     724                      .dwattr $C$DW$41, DW_AT_name("SYSCTL_PERIPH_CLK_CLA1BGCRC")
+     725                      .dwattr $C$DW$41, DW_AT_const_value(0xe00)
+     726                      .dwattr $C$DW$41, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     727                      .dwattr $C$DW$41, DW_AT_decl_line(0x145)
+     728                      .dwattr $C$DW$41, DW_AT_decl_column(0x05)
+     729              
+     730              $C$DW$42        .dwtag  DW_TAG_enumerator
+     731                      .dwattr $C$DW$42, DW_AT_name("SYSCTL_PERIPH_CLK_HRCAL")
+     732                      .dwattr $C$DW$42, DW_AT_const_value(0x1000)
+     733                      .dwattr $C$DW$42, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     734                      .dwattr $C$DW$42, DW_AT_decl_line(0x146)
+     735                      .dwattr $C$DW$42, DW_AT_decl_column(0x05)
+     736              
+     737              $C$DW$43        .dwtag  DW_TAG_enumerator
+     738                      .dwattr $C$DW$43, DW_AT_name("SYSCTL_PERIPH_CLK_TBCLKSYNC")
+     739                      .dwattr $C$DW$43, DW_AT_const_value(0x1200)
+     740                      .dwattr $C$DW$43, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     741                      .dwattr $C$DW$43, DW_AT_decl_line(0x147)
+     742                      .dwattr $C$DW$43, DW_AT_decl_column(0x05)
+     743              
+     744              $C$DW$44        .dwtag  DW_TAG_enumerator
+     745                      .dwattr $C$DW$44, DW_AT_name("SYSCTL_PERIPH_CLK_ERAD")
+     746                      .dwattr $C$DW$44, DW_AT_const_value(0x1800)
+     747                      .dwattr $C$DW$44, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     748                      .dwattr $C$DW$44, DW_AT_decl_line(0x148)
+     749                      .dwattr $C$DW$44, DW_AT_decl_column(0x05)
+     750              
+     751              $C$DW$45        .dwtag  DW_TAG_enumerator
+     752                      .dwattr $C$DW$45, DW_AT_name("SYSCTL_PERIPH_CLK_EPWM1")
+     753                      .dwattr $C$DW$45, DW_AT_const_value(0x02)
+     754                      .dwattr $C$DW$45, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     755                      .dwattr $C$DW$45, DW_AT_decl_line(0x149)
+     756                      .dwattr $C$DW$45, DW_AT_decl_column(0x05)
+     757              
+     758              $C$DW$46        .dwtag  DW_TAG_enumerator
+     759                      .dwattr $C$DW$46, DW_AT_name("SYSCTL_PERIPH_CLK_EPWM2")
+     760                      .dwattr $C$DW$46, DW_AT_const_value(0x102)
+     761                      .dwattr $C$DW$46, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     762                      .dwattr $C$DW$46, DW_AT_decl_line(0x14a)
+     763                      .dwattr $C$DW$46, DW_AT_decl_column(0x05)
+     764              
+     765              $C$DW$47        .dwtag  DW_TAG_enumerator
+     766                      .dwattr $C$DW$47, DW_AT_name("SYSCTL_PERIPH_CLK_EPWM3")
+     767                      .dwattr $C$DW$47, DW_AT_const_value(0x202)
+     768                      .dwattr $C$DW$47, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     769                      .dwattr $C$DW$47, DW_AT_decl_line(0x14b)
+     770                      .dwattr $C$DW$47, DW_AT_decl_column(0x05)
+     771              
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   16
+
+     772              $C$DW$48        .dwtag  DW_TAG_enumerator
+     773                      .dwattr $C$DW$48, DW_AT_name("SYSCTL_PERIPH_CLK_EPWM4")
+     774                      .dwattr $C$DW$48, DW_AT_const_value(0x302)
+     775                      .dwattr $C$DW$48, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     776                      .dwattr $C$DW$48, DW_AT_decl_line(0x14c)
+     777                      .dwattr $C$DW$48, DW_AT_decl_column(0x05)
+     778              
+     779              $C$DW$49        .dwtag  DW_TAG_enumerator
+     780                      .dwattr $C$DW$49, DW_AT_name("SYSCTL_PERIPH_CLK_EPWM5")
+     781                      .dwattr $C$DW$49, DW_AT_const_value(0x402)
+     782                      .dwattr $C$DW$49, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     783                      .dwattr $C$DW$49, DW_AT_decl_line(0x14d)
+     784                      .dwattr $C$DW$49, DW_AT_decl_column(0x05)
+     785              
+     786              $C$DW$50        .dwtag  DW_TAG_enumerator
+     787                      .dwattr $C$DW$50, DW_AT_name("SYSCTL_PERIPH_CLK_EPWM6")
+     788                      .dwattr $C$DW$50, DW_AT_const_value(0x502)
+     789                      .dwattr $C$DW$50, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     790                      .dwattr $C$DW$50, DW_AT_decl_line(0x14e)
+     791                      .dwattr $C$DW$50, DW_AT_decl_column(0x05)
+     792              
+     793              $C$DW$51        .dwtag  DW_TAG_enumerator
+     794                      .dwattr $C$DW$51, DW_AT_name("SYSCTL_PERIPH_CLK_EPWM7")
+     795                      .dwattr $C$DW$51, DW_AT_const_value(0x602)
+     796                      .dwattr $C$DW$51, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     797                      .dwattr $C$DW$51, DW_AT_decl_line(0x14f)
+     798                      .dwattr $C$DW$51, DW_AT_decl_column(0x05)
+     799              
+     800              $C$DW$52        .dwtag  DW_TAG_enumerator
+     801                      .dwattr $C$DW$52, DW_AT_name("SYSCTL_PERIPH_CLK_EPWM8")
+     802                      .dwattr $C$DW$52, DW_AT_const_value(0x702)
+     803                      .dwattr $C$DW$52, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     804                      .dwattr $C$DW$52, DW_AT_decl_line(0x150)
+     805                      .dwattr $C$DW$52, DW_AT_decl_column(0x05)
+     806              
+     807              $C$DW$53        .dwtag  DW_TAG_enumerator
+     808                      .dwattr $C$DW$53, DW_AT_name("SYSCTL_PERIPH_CLK_ECAP1")
+     809                      .dwattr $C$DW$53, DW_AT_const_value(0x03)
+     810                      .dwattr $C$DW$53, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     811                      .dwattr $C$DW$53, DW_AT_decl_line(0x151)
+     812                      .dwattr $C$DW$53, DW_AT_decl_column(0x05)
+     813              
+     814              $C$DW$54        .dwtag  DW_TAG_enumerator
+     815                      .dwattr $C$DW$54, DW_AT_name("SYSCTL_PERIPH_CLK_ECAP2")
+     816                      .dwattr $C$DW$54, DW_AT_const_value(0x103)
+     817                      .dwattr $C$DW$54, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     818                      .dwattr $C$DW$54, DW_AT_decl_line(0x152)
+     819                      .dwattr $C$DW$54, DW_AT_decl_column(0x05)
+     820              
+     821              $C$DW$55        .dwtag  DW_TAG_enumerator
+     822                      .dwattr $C$DW$55, DW_AT_name("SYSCTL_PERIPH_CLK_ECAP3")
+     823                      .dwattr $C$DW$55, DW_AT_const_value(0x203)
+     824                      .dwattr $C$DW$55, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     825                      .dwattr $C$DW$55, DW_AT_decl_line(0x153)
+     826                      .dwattr $C$DW$55, DW_AT_decl_column(0x05)
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   17
+
+     827              
+     828              $C$DW$56        .dwtag  DW_TAG_enumerator
+     829                      .dwattr $C$DW$56, DW_AT_name("SYSCTL_PERIPH_CLK_EQEP1")
+     830                      .dwattr $C$DW$56, DW_AT_const_value(0x04)
+     831                      .dwattr $C$DW$56, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     832                      .dwattr $C$DW$56, DW_AT_decl_line(0x154)
+     833                      .dwattr $C$DW$56, DW_AT_decl_column(0x05)
+     834              
+     835              $C$DW$57        .dwtag  DW_TAG_enumerator
+     836                      .dwattr $C$DW$57, DW_AT_name("SYSCTL_PERIPH_CLK_EQEP2")
+     837                      .dwattr $C$DW$57, DW_AT_const_value(0x104)
+     838                      .dwattr $C$DW$57, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     839                      .dwattr $C$DW$57, DW_AT_decl_line(0x155)
+     840                      .dwattr $C$DW$57, DW_AT_decl_column(0x05)
+     841              
+     842              $C$DW$58        .dwtag  DW_TAG_enumerator
+     843                      .dwattr $C$DW$58, DW_AT_name("SYSCTL_PERIPH_CLK_SD1")
+     844                      .dwattr $C$DW$58, DW_AT_const_value(0x06)
+     845                      .dwattr $C$DW$58, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     846                      .dwattr $C$DW$58, DW_AT_decl_line(0x156)
+     847                      .dwattr $C$DW$58, DW_AT_decl_column(0x05)
+     848              
+     849              $C$DW$59        .dwtag  DW_TAG_enumerator
+     850                      .dwattr $C$DW$59, DW_AT_name("SYSCTL_PERIPH_CLK_SD2")
+     851                      .dwattr $C$DW$59, DW_AT_const_value(0x106)
+     852                      .dwattr $C$DW$59, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     853                      .dwattr $C$DW$59, DW_AT_decl_line(0x157)
+     854                      .dwattr $C$DW$59, DW_AT_decl_column(0x05)
+     855              
+     856              $C$DW$60        .dwtag  DW_TAG_enumerator
+     857                      .dwattr $C$DW$60, DW_AT_name("SYSCTL_PERIPH_CLK_SCIA")
+     858                      .dwattr $C$DW$60, DW_AT_const_value(0x07)
+     859                      .dwattr $C$DW$60, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     860                      .dwattr $C$DW$60, DW_AT_decl_line(0x158)
+     861                      .dwattr $C$DW$60, DW_AT_decl_column(0x05)
+     862              
+     863              $C$DW$61        .dwtag  DW_TAG_enumerator
+     864                      .dwattr $C$DW$61, DW_AT_name("SYSCTL_PERIPH_CLK_SCIB")
+     865                      .dwattr $C$DW$61, DW_AT_const_value(0x107)
+     866                      .dwattr $C$DW$61, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     867                      .dwattr $C$DW$61, DW_AT_decl_line(0x159)
+     868                      .dwattr $C$DW$61, DW_AT_decl_column(0x05)
+     869              
+     870              $C$DW$62        .dwtag  DW_TAG_enumerator
+     871                      .dwattr $C$DW$62, DW_AT_name("SYSCTL_PERIPH_CLK_SPIA")
+     872                      .dwattr $C$DW$62, DW_AT_const_value(0x08)
+     873                      .dwattr $C$DW$62, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     874                      .dwattr $C$DW$62, DW_AT_decl_line(0x15a)
+     875                      .dwattr $C$DW$62, DW_AT_decl_column(0x05)
+     876              
+     877              $C$DW$63        .dwtag  DW_TAG_enumerator
+     878                      .dwattr $C$DW$63, DW_AT_name("SYSCTL_PERIPH_CLK_SPIB")
+     879                      .dwattr $C$DW$63, DW_AT_const_value(0x108)
+     880                      .dwattr $C$DW$63, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     881                      .dwattr $C$DW$63, DW_AT_decl_line(0x15b)
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   18
+
+     882                      .dwattr $C$DW$63, DW_AT_decl_column(0x05)
+     883              
+     884              $C$DW$64        .dwtag  DW_TAG_enumerator
+     885                      .dwattr $C$DW$64, DW_AT_name("SYSCTL_PERIPH_CLK_I2CA")
+     886                      .dwattr $C$DW$64, DW_AT_const_value(0x09)
+     887                      .dwattr $C$DW$64, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     888                      .dwattr $C$DW$64, DW_AT_decl_line(0x15c)
+     889                      .dwattr $C$DW$64, DW_AT_decl_column(0x05)
+     890              
+     891              $C$DW$65        .dwtag  DW_TAG_enumerator
+     892                      .dwattr $C$DW$65, DW_AT_name("SYSCTL_PERIPH_CLK_I2CB")
+     893                      .dwattr $C$DW$65, DW_AT_const_value(0x109)
+     894                      .dwattr $C$DW$65, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     895                      .dwattr $C$DW$65, DW_AT_decl_line(0x15d)
+     896                      .dwattr $C$DW$65, DW_AT_decl_column(0x05)
+     897              
+     898              $C$DW$66        .dwtag  DW_TAG_enumerator
+     899                      .dwattr $C$DW$66, DW_AT_name("SYSCTL_PERIPH_CLK_CANA")
+     900                      .dwattr $C$DW$66, DW_AT_const_value(0x0a)
+     901                      .dwattr $C$DW$66, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     902                      .dwattr $C$DW$66, DW_AT_decl_line(0x15e)
+     903                      .dwattr $C$DW$66, DW_AT_decl_column(0x05)
+     904              
+     905              $C$DW$67        .dwtag  DW_TAG_enumerator
+     906                      .dwattr $C$DW$67, DW_AT_name("SYSCTL_PERIPH_CLK_MCANA")
+     907                      .dwattr $C$DW$67, DW_AT_const_value(0x40a)
+     908                      .dwattr $C$DW$67, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     909                      .dwattr $C$DW$67, DW_AT_decl_line(0x15f)
+     910                      .dwattr $C$DW$67, DW_AT_decl_column(0x05)
+     911              
+     912              $C$DW$68        .dwtag  DW_TAG_enumerator
+     913                      .dwattr $C$DW$68, DW_AT_name("SYSCTL_PERIPH_CLK_ADCA")
+     914                      .dwattr $C$DW$68, DW_AT_const_value(0x0d)
+     915                      .dwattr $C$DW$68, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     916                      .dwattr $C$DW$68, DW_AT_decl_line(0x160)
+     917                      .dwattr $C$DW$68, DW_AT_decl_column(0x05)
+     918              
+     919              $C$DW$69        .dwtag  DW_TAG_enumerator
+     920                      .dwattr $C$DW$69, DW_AT_name("SYSCTL_PERIPH_CLK_ADCB")
+     921                      .dwattr $C$DW$69, DW_AT_const_value(0x10d)
+     922                      .dwattr $C$DW$69, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     923                      .dwattr $C$DW$69, DW_AT_decl_line(0x161)
+     924                      .dwattr $C$DW$69, DW_AT_decl_column(0x05)
+     925              
+     926              $C$DW$70        .dwtag  DW_TAG_enumerator
+     927                      .dwattr $C$DW$70, DW_AT_name("SYSCTL_PERIPH_CLK_ADCC")
+     928                      .dwattr $C$DW$70, DW_AT_const_value(0x20d)
+     929                      .dwattr $C$DW$70, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     930                      .dwattr $C$DW$70, DW_AT_decl_line(0x162)
+     931                      .dwattr $C$DW$70, DW_AT_decl_column(0x05)
+     932              
+     933              $C$DW$71        .dwtag  DW_TAG_enumerator
+     934                      .dwattr $C$DW$71, DW_AT_name("SYSCTL_PERIPH_CLK_CMPSS1")
+     935                      .dwattr $C$DW$71, DW_AT_const_value(0x0e)
+     936                      .dwattr $C$DW$71, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   19
+
+     937                      .dwattr $C$DW$71, DW_AT_decl_line(0x163)
+     938                      .dwattr $C$DW$71, DW_AT_decl_column(0x05)
+     939              
+     940              $C$DW$72        .dwtag  DW_TAG_enumerator
+     941                      .dwattr $C$DW$72, DW_AT_name("SYSCTL_PERIPH_CLK_CMPSS2")
+     942                      .dwattr $C$DW$72, DW_AT_const_value(0x10e)
+     943                      .dwattr $C$DW$72, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     944                      .dwattr $C$DW$72, DW_AT_decl_line(0x164)
+     945                      .dwattr $C$DW$72, DW_AT_decl_column(0x05)
+     946              
+     947              $C$DW$73        .dwtag  DW_TAG_enumerator
+     948                      .dwattr $C$DW$73, DW_AT_name("SYSCTL_PERIPH_CLK_CMPSS3")
+     949                      .dwattr $C$DW$73, DW_AT_const_value(0x20e)
+     950                      .dwattr $C$DW$73, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     951                      .dwattr $C$DW$73, DW_AT_decl_line(0x165)
+     952                      .dwattr $C$DW$73, DW_AT_decl_column(0x05)
+     953              
+     954              $C$DW$74        .dwtag  DW_TAG_enumerator
+     955                      .dwattr $C$DW$74, DW_AT_name("SYSCTL_PERIPH_CLK_CMPSS4")
+     956                      .dwattr $C$DW$74, DW_AT_const_value(0x30e)
+     957                      .dwattr $C$DW$74, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     958                      .dwattr $C$DW$74, DW_AT_decl_line(0x166)
+     959                      .dwattr $C$DW$74, DW_AT_decl_column(0x05)
+     960              
+     961              $C$DW$75        .dwtag  DW_TAG_enumerator
+     962                      .dwattr $C$DW$75, DW_AT_name("SYSCTL_PERIPH_CLK_DACA")
+     963                      .dwattr $C$DW$75, DW_AT_const_value(0x1010)
+     964                      .dwattr $C$DW$75, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     965                      .dwattr $C$DW$75, DW_AT_decl_line(0x167)
+     966                      .dwattr $C$DW$75, DW_AT_decl_column(0x05)
+     967              
+     968              $C$DW$76        .dwtag  DW_TAG_enumerator
+     969                      .dwattr $C$DW$76, DW_AT_name("SYSCTL_PERIPH_CLK_DACB")
+     970                      .dwattr $C$DW$76, DW_AT_const_value(0x1110)
+     971                      .dwattr $C$DW$76, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     972                      .dwattr $C$DW$76, DW_AT_decl_line(0x168)
+     973                      .dwattr $C$DW$76, DW_AT_decl_column(0x05)
+     974              
+     975              $C$DW$77        .dwtag  DW_TAG_enumerator
+     976                      .dwattr $C$DW$77, DW_AT_name("SYSCTL_PERIPH_CLK_CLB1")
+     977                      .dwattr $C$DW$77, DW_AT_const_value(0x11)
+     978                      .dwattr $C$DW$77, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     979                      .dwattr $C$DW$77, DW_AT_decl_line(0x169)
+     980                      .dwattr $C$DW$77, DW_AT_decl_column(0x05)
+     981              
+     982              $C$DW$78        .dwtag  DW_TAG_enumerator
+     983                      .dwattr $C$DW$78, DW_AT_name("SYSCTL_PERIPH_CLK_CLB2")
+     984                      .dwattr $C$DW$78, DW_AT_const_value(0x111)
+     985                      .dwattr $C$DW$78, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     986                      .dwattr $C$DW$78, DW_AT_decl_line(0x16a)
+     987                      .dwattr $C$DW$78, DW_AT_decl_column(0x05)
+     988              
+     989              $C$DW$79        .dwtag  DW_TAG_enumerator
+     990                      .dwattr $C$DW$79, DW_AT_name("SYSCTL_PERIPH_CLK_CLB3")
+     991                      .dwattr $C$DW$79, DW_AT_const_value(0x211)
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   20
+
+     992                      .dwattr $C$DW$79, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+     993                      .dwattr $C$DW$79, DW_AT_decl_line(0x16b)
+     994                      .dwattr $C$DW$79, DW_AT_decl_column(0x05)
+     995              
+     996              $C$DW$80        .dwtag  DW_TAG_enumerator
+     997                      .dwattr $C$DW$80, DW_AT_name("SYSCTL_PERIPH_CLK_CLB4")
+     998                      .dwattr $C$DW$80, DW_AT_const_value(0x311)
+     999                      .dwattr $C$DW$80, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1000                      .dwattr $C$DW$80, DW_AT_decl_line(0x16c)
+    1001                      .dwattr $C$DW$80, DW_AT_decl_column(0x05)
+    1002              
+    1003              $C$DW$81        .dwtag  DW_TAG_enumerator
+    1004                      .dwattr $C$DW$81, DW_AT_name("SYSCTL_PERIPH_CLK_FSITXA")
+    1005                      .dwattr $C$DW$81, DW_AT_const_value(0x12)
+    1006                      .dwattr $C$DW$81, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1007                      .dwattr $C$DW$81, DW_AT_decl_line(0x16d)
+    1008                      .dwattr $C$DW$81, DW_AT_decl_column(0x05)
+    1009              
+    1010              $C$DW$82        .dwtag  DW_TAG_enumerator
+    1011                      .dwattr $C$DW$82, DW_AT_name("SYSCTL_PERIPH_CLK_FSIRXA")
+    1012                      .dwattr $C$DW$82, DW_AT_const_value(0x112)
+    1013                      .dwattr $C$DW$82, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1014                      .dwattr $C$DW$82, DW_AT_decl_line(0x16e)
+    1015                      .dwattr $C$DW$82, DW_AT_decl_column(0x05)
+    1016              
+    1017              $C$DW$83        .dwtag  DW_TAG_enumerator
+    1018                      .dwattr $C$DW$83, DW_AT_name("SYSCTL_PERIPH_CLK_LINA")
+    1019                      .dwattr $C$DW$83, DW_AT_const_value(0x13)
+    1020                      .dwattr $C$DW$83, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1021                      .dwattr $C$DW$83, DW_AT_decl_line(0x16f)
+    1022                      .dwattr $C$DW$83, DW_AT_decl_column(0x05)
+    1023              
+    1024              $C$DW$84        .dwtag  DW_TAG_enumerator
+    1025                      .dwattr $C$DW$84, DW_AT_name("SYSCTL_PERIPH_CLK_LINB")
+    1026                      .dwattr $C$DW$84, DW_AT_const_value(0x113)
+    1027                      .dwattr $C$DW$84, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1028                      .dwattr $C$DW$84, DW_AT_decl_line(0x170)
+    1029                      .dwattr $C$DW$84, DW_AT_decl_column(0x05)
+    1030              
+    1031              $C$DW$85        .dwtag  DW_TAG_enumerator
+    1032                      .dwattr $C$DW$85, DW_AT_name("SYSCTL_PERIPH_CLK_PMBUSA")
+    1033                      .dwattr $C$DW$85, DW_AT_const_value(0x14)
+    1034                      .dwattr $C$DW$85, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1035                      .dwattr $C$DW$85, DW_AT_decl_line(0x171)
+    1036                      .dwattr $C$DW$85, DW_AT_decl_column(0x05)
+    1037              
+    1038              $C$DW$86        .dwtag  DW_TAG_enumerator
+    1039                      .dwattr $C$DW$86, DW_AT_name("SYSCTL_PERIPH_CLK_DCC0")
+    1040                      .dwattr $C$DW$86, DW_AT_const_value(0x15)
+    1041                      .dwattr $C$DW$86, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1042                      .dwattr $C$DW$86, DW_AT_decl_line(0x172)
+    1043                      .dwattr $C$DW$86, DW_AT_decl_column(0x05)
+    1044              
+    1045              $C$DW$87        .dwtag  DW_TAG_enumerator
+    1046                      .dwattr $C$DW$87, DW_AT_name("SYSCTL_PERIPH_CLK_DCC1")
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   21
+
+    1047                      .dwattr $C$DW$87, DW_AT_const_value(0x115)
+    1048                      .dwattr $C$DW$87, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1049                      .dwattr $C$DW$87, DW_AT_decl_line(0x173)
+    1050                      .dwattr $C$DW$87, DW_AT_decl_column(0x05)
+    1051              
+    1052              $C$DW$88        .dwtag  DW_TAG_enumerator
+    1053                      .dwattr $C$DW$88, DW_AT_name("SYSCTL_PERIPH_CLK_HICA")
+    1054                      .dwattr $C$DW$88, DW_AT_const_value(0x19)
+    1055                      .dwattr $C$DW$88, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1056                      .dwattr $C$DW$88, DW_AT_decl_line(0x174)
+    1057                      .dwattr $C$DW$88, DW_AT_decl_column(0x05)
+    1058              
+    1059              $C$DW$89        .dwtag  DW_TAG_enumerator
+    1060                      .dwattr $C$DW$89, DW_AT_name("SYSCTL_PERIPH_CLK_AESA")
+    1061                      .dwattr $C$DW$89, DW_AT_const_value(0x1a)
+    1062                      .dwattr $C$DW$89, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1063                      .dwattr $C$DW$89, DW_AT_decl_line(0x175)
+    1064                      .dwattr $C$DW$89, DW_AT_decl_column(0x05)
+    1065              
+    1066              $C$DW$90        .dwtag  DW_TAG_enumerator
+    1067                      .dwattr $C$DW$90, DW_AT_name("SYSCTL_PERIPH_CLK_EPG1")
+    1068                      .dwattr $C$DW$90, DW_AT_const_value(0x1b)
+    1069                      .dwattr $C$DW$90, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1070                      .dwattr $C$DW$90, DW_AT_decl_line(0x176)
+    1071                      .dwattr $C$DW$90, DW_AT_decl_column(0x05)
+    1072              
+    1073                      .dwattr $C$DW$T$19, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003
+    1074                      .dwattr $C$DW$T$19, DW_AT_decl_line(0x13e)
+    1075                      .dwattr $C$DW$T$19, DW_AT_decl_column(0x01)
+    1076                      .dwendtag $C$DW$T$19
+    1077              
+    1078                      .dwendtag $C$DW$TU$19
+    1079              
+    1080              
+    1081              $C$DW$TU$20     .dwtag  DW_TAG_type_unit
+    1082                      .dwmtype  $C$DW$T$20
+    1083              $C$DW$T$20      .dwtag  DW_TAG_typedef
+    1084                      .dwattr $C$DW$T$20, DW_AT_name("SysCtl_PeripheralPCLOCKCR")
+    1085                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+    1086                      .dwattr $C$DW$T$20, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003
+    1087                      .dwattr $C$DW$T$20, DW_AT_decl_line(0x177)
+    1088                      .dwattr $C$DW$T$20, DW_AT_decl_column(0x03)
+    1089              
+    1090                      .dwendtag $C$DW$TU$20
+    1091              
+    1092              
+    1093              $C$DW$TU$21     .dwtag  DW_TAG_type_unit
+    1094                      .dwmtype  $C$DW$T$21
+    1095              
+    1096              $C$DW$T$21      .dwtag  DW_TAG_enumeration_type
+    1097                      .dwattr $C$DW$T$21, DW_AT_byte_size(0x01)
+    1098              $C$DW$91        .dwtag  DW_TAG_enumerator
+    1099                      .dwattr $C$DW$91, DW_AT_name("SYSCTL_LSPCLK_PRESCALE_1")
+    1100                      .dwattr $C$DW$91, DW_AT_const_value(0x00)
+    1101                      .dwattr $C$DW$91, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   22
+
+    1102                      .dwattr $C$DW$91, DW_AT_decl_line(0x1f2)
+    1103                      .dwattr $C$DW$91, DW_AT_decl_column(0x05)
+    1104              
+    1105              $C$DW$92        .dwtag  DW_TAG_enumerator
+    1106                      .dwattr $C$DW$92, DW_AT_name("SYSCTL_LSPCLK_PRESCALE_2")
+    1107                      .dwattr $C$DW$92, DW_AT_const_value(0x01)
+    1108                      .dwattr $C$DW$92, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1109                      .dwattr $C$DW$92, DW_AT_decl_line(0x1f3)
+    1110                      .dwattr $C$DW$92, DW_AT_decl_column(0x05)
+    1111              
+    1112              $C$DW$93        .dwtag  DW_TAG_enumerator
+    1113                      .dwattr $C$DW$93, DW_AT_name("SYSCTL_LSPCLK_PRESCALE_4")
+    1114                      .dwattr $C$DW$93, DW_AT_const_value(0x02)
+    1115                      .dwattr $C$DW$93, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1116                      .dwattr $C$DW$93, DW_AT_decl_line(0x1f4)
+    1117                      .dwattr $C$DW$93, DW_AT_decl_column(0x05)
+    1118              
+    1119              $C$DW$94        .dwtag  DW_TAG_enumerator
+    1120                      .dwattr $C$DW$94, DW_AT_name("SYSCTL_LSPCLK_PRESCALE_6")
+    1121                      .dwattr $C$DW$94, DW_AT_const_value(0x03)
+    1122                      .dwattr $C$DW$94, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1123                      .dwattr $C$DW$94, DW_AT_decl_line(0x1f5)
+    1124                      .dwattr $C$DW$94, DW_AT_decl_column(0x05)
+    1125              
+    1126              $C$DW$95        .dwtag  DW_TAG_enumerator
+    1127                      .dwattr $C$DW$95, DW_AT_name("SYSCTL_LSPCLK_PRESCALE_8")
+    1128                      .dwattr $C$DW$95, DW_AT_const_value(0x04)
+    1129                      .dwattr $C$DW$95, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1130                      .dwattr $C$DW$95, DW_AT_decl_line(0x1f6)
+    1131                      .dwattr $C$DW$95, DW_AT_decl_column(0x05)
+    1132              
+    1133              $C$DW$96        .dwtag  DW_TAG_enumerator
+    1134                      .dwattr $C$DW$96, DW_AT_name("SYSCTL_LSPCLK_PRESCALE_10")
+    1135                      .dwattr $C$DW$96, DW_AT_const_value(0x05)
+    1136                      .dwattr $C$DW$96, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1137                      .dwattr $C$DW$96, DW_AT_decl_line(0x1f7)
+    1138                      .dwattr $C$DW$96, DW_AT_decl_column(0x05)
+    1139              
+    1140              $C$DW$97        .dwtag  DW_TAG_enumerator
+    1141                      .dwattr $C$DW$97, DW_AT_name("SYSCTL_LSPCLK_PRESCALE_12")
+    1142                      .dwattr $C$DW$97, DW_AT_const_value(0x06)
+    1143                      .dwattr $C$DW$97, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1144                      .dwattr $C$DW$97, DW_AT_decl_line(0x1f8)
+    1145                      .dwattr $C$DW$97, DW_AT_decl_column(0x05)
+    1146              
+    1147              $C$DW$98        .dwtag  DW_TAG_enumerator
+    1148                      .dwattr $C$DW$98, DW_AT_name("SYSCTL_LSPCLK_PRESCALE_14")
+    1149                      .dwattr $C$DW$98, DW_AT_const_value(0x07)
+    1150                      .dwattr $C$DW$98, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003x\
+    1151                      .dwattr $C$DW$98, DW_AT_decl_line(0x1f9)
+    1152                      .dwattr $C$DW$98, DW_AT_decl_column(0x05)
+    1153              
+    1154                      .dwattr $C$DW$T$21, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003
+    1155                      .dwattr $C$DW$T$21, DW_AT_decl_line(0x1f1)
+    1156                      .dwattr $C$DW$T$21, DW_AT_decl_column(0x01)
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   23
+
+    1157                      .dwendtag $C$DW$T$21
+    1158              
+    1159                      .dwendtag $C$DW$TU$21
+    1160              
+    1161              
+    1162              $C$DW$TU$22     .dwtag  DW_TAG_type_unit
+    1163                      .dwmtype  $C$DW$T$22
+    1164              $C$DW$T$22      .dwtag  DW_TAG_typedef
+    1165                      .dwattr $C$DW$T$22, DW_AT_name("SysCtl_LSPCLKPrescaler")
+    1166                      .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+    1167                      .dwattr $C$DW$T$22, DW_AT_decl_file("C:\Users\Joel9\Downloads\llc_capstone_F28003\llc_capstone_F28003
+    1168                      .dwattr $C$DW$T$22, DW_AT_decl_line(0x1fa)
+    1169                      .dwattr $C$DW$T$22, DW_AT_decl_column(0x03)
+    1170              
+    1171                      .dwendtag $C$DW$TU$22
+    1172              
+    1173              
+    1174              $C$DW$TU$23     .dwtag  DW_TAG_type_unit
+    1175                      .dwmtype  $C$DW$T$23
+    1176              
+    1177              $C$DW$T$23      .dwtag  DW_TAG_enumeration_type
+    1178                      .dwattr $C$DW$T$23, DW_AT_byte_size(0x01)
+    1179              $C$DW$99        .dwtag  DW_TAG_enumerator
+    1180                      .dwattr $C$DW$99, DW_AT_name("GPIO_PORT_A")
+    1181                      .dwattr $C$DW$99, DW_AT_const_value(0x00)
+    1182                      .dwattr $C$DW$99, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/
+    1183                      .dwattr $C$DW$99, DW_AT_decl_line(0xbd)
+    1184                      .dwattr $C$DW$99, DW_AT_decl_column(0x05)
+    1185              
+    1186              $C$DW$100       .dwtag  DW_TAG_enumerator
+    1187                      .dwattr $C$DW$100, DW_AT_name("GPIO_PORT_B")
+    1188                      .dwattr $C$DW$100, DW_AT_const_value(0x01)
+    1189                      .dwattr $C$DW$100, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x
+    1190                      .dwattr $C$DW$100, DW_AT_decl_line(0xbe)
+    1191                      .dwattr $C$DW$100, DW_AT_decl_column(0x05)
+    1192              
+    1193              $C$DW$101       .dwtag  DW_TAG_enumerator
+    1194                      .dwattr $C$DW$101, DW_AT_name("GPIO_PORT_H")
+    1195                      .dwattr $C$DW$101, DW_AT_const_value(0x07)
+    1196                      .dwattr $C$DW$101, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x
+    1197                      .dwattr $C$DW$101, DW_AT_decl_line(0xbf)
+    1198                      .dwattr $C$DW$101, DW_AT_decl_column(0x05)
+    1199              
+    1200                      .dwattr $C$DW$T$23, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003
+    1201                      .dwattr $C$DW$T$23, DW_AT_decl_line(0xbc)
+    1202                      .dwattr $C$DW$T$23, DW_AT_decl_column(0x01)
+    1203                      .dwendtag $C$DW$T$23
+    1204              
+    1205                      .dwendtag $C$DW$TU$23
+    1206              
+    1207              
+    1208              $C$DW$TU$24     .dwtag  DW_TAG_type_unit
+    1209                      .dwmtype  $C$DW$T$24
+    1210              $C$DW$T$24      .dwtag  DW_TAG_typedef
+    1211                      .dwattr $C$DW$T$24, DW_AT_name("GPIO_Port")
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   24
+
+    1212                      .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$23)
+    1213                      .dwattr $C$DW$T$24, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003
+    1214                      .dwattr $C$DW$T$24, DW_AT_decl_line(0xc0)
+    1215                      .dwattr $C$DW$T$24, DW_AT_decl_column(0x03)
+    1216              
+    1217                      .dwendtag $C$DW$TU$24
+    1218              
+    1219              
+    1220              $C$DW$TU$25     .dwtag  DW_TAG_type_unit
+    1221                      .dwmtype  $C$DW$T$25
+    1222              
+    1223              $C$DW$T$25      .dwtag  DW_TAG_enumeration_type
+    1224                      .dwattr $C$DW$T$25, DW_AT_byte_size(0x01)
+    1225              $C$DW$102       .dwtag  DW_TAG_enumerator
+    1226                      .dwattr $C$DW$102, DW_AT_name("GPIO_ANALOG_DISABLED")
+    1227                      .dwattr $C$DW$102, DW_AT_const_value(0x00)
+    1228                      .dwattr $C$DW$102, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x
+    1229                      .dwattr $C$DW$102, DW_AT_decl_line(0xa5)
+    1230                      .dwattr $C$DW$102, DW_AT_decl_column(0x05)
+    1231              
+    1232              $C$DW$103       .dwtag  DW_TAG_enumerator
+    1233                      .dwattr $C$DW$103, DW_AT_name("GPIO_ANALOG_ENABLED")
+    1234                      .dwattr $C$DW$103, DW_AT_const_value(0x01)
+    1235                      .dwattr $C$DW$103, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x
+    1236                      .dwattr $C$DW$103, DW_AT_decl_line(0xa6)
+    1237                      .dwattr $C$DW$103, DW_AT_decl_column(0x05)
+    1238              
+    1239                      .dwattr $C$DW$T$25, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003
+    1240                      .dwattr $C$DW$T$25, DW_AT_decl_line(0xa4)
+    1241                      .dwattr $C$DW$T$25, DW_AT_decl_column(0x01)
+    1242                      .dwendtag $C$DW$T$25
+    1243              
+    1244                      .dwendtag $C$DW$TU$25
+    1245              
+    1246              
+    1247              $C$DW$TU$26     .dwtag  DW_TAG_type_unit
+    1248                      .dwmtype  $C$DW$T$26
+    1249              $C$DW$T$26      .dwtag  DW_TAG_typedef
+    1250                      .dwattr $C$DW$T$26, DW_AT_name("GPIO_AnalogMode")
+    1251                      .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+    1252                      .dwattr $C$DW$T$26, DW_AT_decl_file("C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003
+    1253                      .dwattr $C$DW$T$26, DW_AT_decl_line(0xa7)
+    1254                      .dwattr $C$DW$T$26, DW_AT_decl_column(0x03)
+    1255              
+    1256                      .dwendtag $C$DW$TU$26
+    1257              
+    1258              
+    1259              $C$DW$TU$2      .dwtag  DW_TAG_type_unit
+    1260                      .dwmtype  $C$DW$T$2
+    1261              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1262                      .dwattr $C$DW$T$2, DW_AT_name("void")
+    1263              
+    1264                      .dwendtag $C$DW$TU$2
+    1265              
+    1266              
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   25
+
+    1267              $C$DW$TU$4      .dwtag  DW_TAG_type_unit
+    1268                      .dwmtype  $C$DW$T$4
+    1269              $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1270                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1271                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1272                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    1273              
+    1274                      .dwendtag $C$DW$TU$4
+    1275              
+    1276              
+    1277              $C$DW$TU$5      .dwtag  DW_TAG_type_unit
+    1278                      .dwmtype  $C$DW$T$5
+    1279              $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1280                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1281                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1282                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1283              
+    1284                      .dwendtag $C$DW$TU$5
+    1285              
+    1286              
+    1287              $C$DW$TU$6      .dwtag  DW_TAG_type_unit
+    1288                      .dwmtype  $C$DW$T$6
+    1289              $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1290                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1291                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1292                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1293              
+    1294                      .dwendtag $C$DW$TU$6
+    1295              
+    1296              
+    1297              $C$DW$TU$7      .dwtag  DW_TAG_type_unit
+    1298                      .dwmtype  $C$DW$T$7
+    1299              $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1300                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1301                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1302                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+    1303              
+    1304                      .dwendtag $C$DW$TU$7
+    1305              
+    1306              
+    1307              $C$DW$TU$8      .dwtag  DW_TAG_type_unit
+    1308                      .dwmtype  $C$DW$T$8
+    1309              $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1310                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1311                      .dwattr $C$DW$T$8, DW_AT_name("short")
+    1312                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+    1313              
+    1314                      .dwendtag $C$DW$TU$8
+    1315              
+    1316              
+    1317              $C$DW$TU$9      .dwtag  DW_TAG_type_unit
+    1318                      .dwmtype  $C$DW$T$9
+    1319              $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1320                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1321                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   26
+
+    1322                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+    1323              
+    1324                      .dwendtag $C$DW$TU$9
+    1325              
+    1326              
+    1327              $C$DW$TU$10     .dwtag  DW_TAG_type_unit
+    1328                      .dwmtype  $C$DW$T$10
+    1329              $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1330                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1331                      .dwattr $C$DW$T$10, DW_AT_name("int")
+    1332                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+    1333              
+    1334                      .dwendtag $C$DW$TU$10
+    1335              
+    1336              
+    1337              $C$DW$TU$11     .dwtag  DW_TAG_type_unit
+    1338                      .dwmtype  $C$DW$T$11
+    1339              $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1340                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1341                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1342                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+    1343              
+    1344                      .dwendtag $C$DW$TU$11
+    1345              
+    1346              
+    1347              $C$DW$TU$35     .dwtag  DW_TAG_type_unit
+    1348                      .dwmtype  $C$DW$T$35
+    1349              $C$DW$T$35      .dwtag  DW_TAG_typedef
+    1350                      .dwattr $C$DW$T$35, DW_AT_name("__uint16_t")
+    1351                      .dwattr $C$DW$T$35, DW_AT_type(*$C$DW$T$11)
+    1352                      .dwattr $C$DW$T$35, DW_AT_decl_file("C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include
+    1353                      .dwattr $C$DW$T$35, DW_AT_decl_line(0x41)
+    1354                      .dwattr $C$DW$T$35, DW_AT_decl_column(0x1c)
+    1355              
+    1356                      .dwendtag $C$DW$TU$35
+    1357              
+    1358              
+    1359              $C$DW$TU$36     .dwtag  DW_TAG_type_unit
+    1360                      .dwmtype  $C$DW$T$36
+    1361              $C$DW$T$36      .dwtag  DW_TAG_typedef
+    1362                      .dwattr $C$DW$T$36, DW_AT_name("uint16_t")
+    1363                      .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$35)
+    1364                      .dwattr $C$DW$T$36, DW_AT_decl_file("C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include
+    1365                      .dwattr $C$DW$T$36, DW_AT_decl_line(0x41)
+    1366                      .dwattr $C$DW$T$36, DW_AT_decl_column(0x15)
+    1367              
+    1368                      .dwendtag $C$DW$TU$36
+    1369              
+    1370              
+    1371              $C$DW$TU$12     .dwtag  DW_TAG_type_unit
+    1372                      .dwmtype  $C$DW$T$12
+    1373              $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1374                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1375                      .dwattr $C$DW$T$12, DW_AT_name("long")
+    1376                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   27
+
+    1377              
+    1378                      .dwendtag $C$DW$TU$12
+    1379              
+    1380              
+    1381              $C$DW$TU$13     .dwtag  DW_TAG_type_unit
+    1382                      .dwmtype  $C$DW$T$13
+    1383              $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1384                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1385                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1386                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+    1387              
+    1388                      .dwendtag $C$DW$TU$13
+    1389              
+    1390              
+    1391              $C$DW$TU$33     .dwtag  DW_TAG_type_unit
+    1392                      .dwmtype  $C$DW$T$33
+    1393              $C$DW$T$33      .dwtag  DW_TAG_typedef
+    1394                      .dwattr $C$DW$T$33, DW_AT_name("__uint32_t")
+    1395                      .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$13)
+    1396                      .dwattr $C$DW$T$33, DW_AT_decl_file("C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include
+    1397                      .dwattr $C$DW$T$33, DW_AT_decl_line(0x43)
+    1398                      .dwattr $C$DW$T$33, DW_AT_decl_column(0x1c)
+    1399              
+    1400                      .dwendtag $C$DW$TU$33
+    1401              
+    1402              
+    1403              $C$DW$TU$34     .dwtag  DW_TAG_type_unit
+    1404                      .dwmtype  $C$DW$T$34
+    1405              $C$DW$T$34      .dwtag  DW_TAG_typedef
+    1406                      .dwattr $C$DW$T$34, DW_AT_name("uint32_t")
+    1407                      .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$33)
+    1408                      .dwattr $C$DW$T$34, DW_AT_decl_file("C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include
+    1409                      .dwattr $C$DW$T$34, DW_AT_decl_line(0x46)
+    1410                      .dwattr $C$DW$T$34, DW_AT_decl_column(0x15)
+    1411              
+    1412                      .dwendtag $C$DW$TU$34
+    1413              
+    1414              
+    1415              $C$DW$TU$14     .dwtag  DW_TAG_type_unit
+    1416                      .dwmtype  $C$DW$T$14
+    1417              $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1418                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1419                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1420                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+    1421              
+    1422                      .dwendtag $C$DW$TU$14
+    1423              
+    1424              
+    1425              $C$DW$TU$15     .dwtag  DW_TAG_type_unit
+    1426                      .dwmtype  $C$DW$T$15
+    1427              $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1428                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1429                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1430                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+    1431              
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   28
+
+    1432                      .dwendtag $C$DW$TU$15
+    1433              
+    1434              
+    1435              $C$DW$TU$16     .dwtag  DW_TAG_type_unit
+    1436                      .dwmtype  $C$DW$T$16
+    1437              $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1438                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1439                      .dwattr $C$DW$T$16, DW_AT_name("float")
+    1440                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+    1441              
+    1442                      .dwendtag $C$DW$TU$16
+    1443              
+    1444              
+    1445              $C$DW$TU$17     .dwtag  DW_TAG_type_unit
+    1446                      .dwmtype  $C$DW$T$17
+    1447              $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1448                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1449                      .dwattr $C$DW$T$17, DW_AT_name("double")
+    1450                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x04)
+    1451              
+    1452                      .dwendtag $C$DW$TU$17
+    1453              
+    1454              
+    1455              $C$DW$TU$18     .dwtag  DW_TAG_type_unit
+    1456                      .dwmtype  $C$DW$T$18
+    1457              $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1458                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1459                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1460                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+    1461              
+    1462                      .dwendtag $C$DW$TU$18
+    1463              
+    1464              
+    1465              $C$DW$TU$43     .dwtag  DW_TAG_type_unit
+    1466                      .dwmtype  $C$DW$T$43
+    1467              $C$DW$104       .dwtag  DW_TAG_TI_far_type
+    1468                      .dwattr $C$DW$104, DW_AT_type(*$C$DW$T$5)
+    1469              
+    1470              $C$DW$T$43      .dwtag  DW_TAG_const_type
+    1471                      .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$104)
+    1472              
+    1473                      .dwendtag $C$DW$TU$43
+    1474              
+    1475              
+    1476              $C$DW$TU$44     .dwtag  DW_TAG_type_unit
+    1477                      .dwmtype  $C$DW$T$44
+    1478              $C$DW$T$44      .dwtag  DW_TAG_pointer_type
+    1479                      .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$43)
+    1480                      .dwattr $C$DW$T$44, DW_AT_address_class(0x20)
+    1481              
+    1482                      .dwendtag $C$DW$TU$44
+    1483              
+    1484              
+    1485              $C$DW$TU$55     .dwtag  DW_TAG_type_unit
+    1486                      .dwmtype  $C$DW$T$55
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+device.asm                                                           PAGE   29
+
+    1487              $C$DW$T$55      .dwtag  DW_TAG_base_type
+    1488                      .dwattr $C$DW$T$55, DW_AT_encoding(DW_ATE_unsigned_char)
+    1489                      .dwattr $C$DW$T$55, DW_AT_name("unsigned char")
+    1490                      .dwattr $C$DW$T$55, DW_AT_byte_size(0x01)
+    1491              
+    1492                      .dwendtag $C$DW$TU$55
+    1493              
+
+No Assembly Errors, No Assembly Warnings

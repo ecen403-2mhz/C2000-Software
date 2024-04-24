@@ -1,0 +1,178 @@
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+../libraries/DCL/DCL_PID_C1.asm                                      PAGE    1
+
+       1              ; DCL_PID_C1.asm - Series PID controller
+       2              ;
+       3              ; Copyright (C) 2020 Texas Instruments Incorporated - http://www.ti.com/
+       4              ; ALL RIGHTS RESERVED 
+       5              
+       6                        .if $defined(__TI_EABI__)
+       7                              .if __TI_EABI__
+       8                              .asg    DCL_runPID_C1, _DCL_runPID_C1
+       9                              .endif
+      10                    .endif
+      11              
+      12        0000  FASTCR_PID_C1   .set    0               ; set to 1 to enable shadowed context save/restore
+      13              
+      14                              .global _DCL_runPID_C1
+      15              
+      16 00000000                       .sect   "dclfuncs"
+      17              
+      18              ; 11/14/2017: [RP] added XAR1 to context save
+      19              
+      20              ; C prototype: float DCL_runPID_C1(DCL_PID *p, float32_t rk, float32_t yk, float32_t lk)
+      21              ; argument 1 = *p : 32-bit PID structure address [XAR4]
+      22              ; argument 2 = rk : 32-bit floating-point reference [R0H]
+      23              ; argument 3 = yk : 32-bit floating-point feedback [R1H]
+      24              ; argument 4 = lk : 32-bit floating-point saturation input [R2H]
+      25              ; return = uk : 32-bit floating-point [R0H]
+      26              
+      27                              .align  2
+      28              
+      29 00000000       _DCL_runPID_C1:
+      30                              .asmfunc
+      31              ; context save
+      32 00000000 B2BD                  MOVL            *SP++, XAR1
+      33                      .if FASTCR_PID_C1 = 0
+      34 00000001 E203                  MOV32           *SP++, R4H
+         00000002 04BD 
+      35 00000003 E203                  MOV32           *SP++, R5H
+         00000004 05BD 
+      36 00000005 E203                  MOV32           *SP++, R6H
+         00000006 06BD 
+      37 00000007 E203                  MOV32           *SP++, R7H
+         00000008 07BD 
+      38                      .else
+      39                              SAVE
+      40                      .endif
+      41              
+      42              ; derivative path
+      43 00000009 E2AF                  MOV32           R3H, *+XAR4[4]                          ; R3H = Kda
+         0000000a 03E4 
+      44 0000000b 28A0                  MOV                     AR0, #8                                         ; AR0 = 8
+         0000000c 0008 
+      45 0000000d E306                  MPYF32          R5H, R1H, R3H                           ; R5H = Kda * yk
+         0000000e 6C94 
+      46              ||              MOV32           R4H, *+XAR4[AR0]                        ; R4H = c1a
+      47 0000000f 28A0                  MOV                     AR0, #0xC                                       ; AR0 = 12
+         00000010 000C 
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+../libraries/DCL/DCL_PID_C1.asm                                      PAGE    2
+
+      48 00000011 E30B                  MPYF32          R3H, R4H, R5H                           ; R3H = v1 = Kda * yk * c1a
+         00000012 1E94 
+      49              ||              MOV32           R6H, *+XAR4[AR0]                        ; R6H = d2
+      50 00000013 28A1                  MOV                     AR1, #0xE                                       ; AR1 = 14
+         00000014 000E 
+      51 00000015 E32C                  SUBF32          R4H, R3H, R6H                           ; R4H = v1 - d2
+         00000016 E59C 
+      52              ||              MOV32           R5H, *+XAR4[AR1]                        ; R5H = d3
+      53 00000017 7700                  NOP
+      54 00000018 E02B                  SUBF32          R4H, R4H, R5H                           ; R4H = v4 = v1 - d2 - d3
+         00000019 2394 
+      55              ||              MOV32           *+XAR4[AR0], R3H                        ; save d2
+      56 0000001a 28A0                  MOV                     AR0, #0xA                                       ; AR0 = 10
+         0000001b 000A 
+      57 0000001c E2AF                  MOV32           R6H, *+XAR4[AR0]                        ; R6H = c2a
+         0000001d 0694 
+      58 0000001e E700                  MPYF32          R5H, R6H, R4H                           ; R5H = d3 = c2a * v4
+         0000001f 0135 
+      59 00000020 7700                  NOP
+      60 00000021 E203                  MOV32           *+XAR4[AR1], R5H                        ; save d3
+         00000022 059C 
+      61              
+      62              ; proportional path
+      63 00000023 E2AF                  MOV32           R5H, *+XAR4[6]                          ; R5H = Kra
+         00000024 05F4 
+      64 00000025 E700                  MPYF32          R6H, R5H, R0H                           ; R6H = Kra * rk
+         00000026 002E 
+      65 00000027 7700                  NOP
+      66 00000028 E720                  SUBF32          R3H, R6H, R1H                           ; R3H = v5 = (Kra * rk) - yk
+         00000029 0073 
+      67 0000002a 7700                  NOP
+      68 0000002b E328                  SUBF32          R5H, R3H, R4H                           ; R5H = v5 - v4
+         0000002c EEC4 
+      69              ||              MOV32           R6H, *+XAR4[0]                          ; R6H = Kpa
+      70 0000002d 28A0                  MOV             AR0, #0x12                                      ; AR0 = 18
+         0000002e 0012 
+      71 0000002f E30D                  MPYF32          R7H, R5H, R6H                           ; R7H = v6
+         00000030 7CD4 
+      72              ||              MOV32           R4H, *+XAR4[2]                          ; R4H = Kia
+      73              
+      74              ; integral path
+      75 00000031 E750                  MPYF32          R5H, R4H, R6H                           ; R5H = Kpa * Kia
+         00000032 87A5 
+      76              ||              SUBF32          R3H, R0H, R1H                           ; R3H = rk - yk
+      77 00000033 E2AF                  MOV32           R6H, *+XAR4[AR0]                        ; R6H = i14
+         00000034 0694 
+      78 00000035 E700                  MPYF32          R4H, R3H, R5H                           ; R4H = v7
+         00000036 015C 
+      79 00000037 28A0                  MOV                     AR0, #0x10                                      ; AR0 = 16
+         00000038 0010 
+      80 00000039 E30D                  MPYF32          R4H, R4H, R6H                           ; R4H = v7 * i14
+         0000003a 2694 
+      81              ||              MOV32           R6H, *+XAR4[AR0]                        ; R6H = i10
+      82 0000003b 7700                  NOP
+      83 0000003c E710                  ADDF32          R3H, R4H, R6H                           ; R3H = v8
+TMS320C2000 Assembler PC v22.6.1 Thu Mar 28 17:35:22 2024
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+../libraries/DCL/DCL_PID_C1.asm                                      PAGE    3
+
+         0000003d 01A3 
+      84              
+      85              ; output saturation
+      86 0000003e E590                  ZERO            R0H                                                     ; R0H = 0.0f
+      87 0000003f E203                  MOV32           *+XAR4[AR0], R3H                        ; save i10
+         00000040 0394 
+      88 00000041 E710                  ADDF32          R1H, R7H, R3H                           ; R1H = v9
+         00000042 00F9 
+      89 00000043 E88F                  ADDF32          R6H, R0H, #1.0                          ; R6H = 1.0f
+         00000044 E006 
+      90 00000045 28A1                  MOV                     AR1, #0x14                                      ; AR1 = 20
+         00000046 0014 
+      91 00000047 E2AF                  MOV32           R3H, *+XAR4[AR1]                        ; R3H = Umaxa
+         00000048 039C 
+      92 00000049 E69D                  MINF32          R1H, R3H                                        ; sat v9
+         0000004a 0199 
+      93              ||              MOV32           R6H, R0H                                        ; R6H = 0.0f if sat
+      94 0000004b 28A1                  MOV                     AR1, #0x16                                      ; AR1 = 22
+         0000004c 0016 
+      95 0000004d E2AF                  MOV32           R3H, *+XAR4[AR1]                        ; R3H = Umina
+         0000004e 039C 
+      96 0000004f E69C                  MAXF32          R1H, R3H                                        ; sat v9
+         00000050 0199 
+      97              ||              MOV32           R6H, R0H                                        ; R6H = 0.0f if sat
+      98              
+      99              ; context restore & return
+     100 00000051 E700                  MPYF32          R3H, R2H, R6H                           ; R3H = i14
+         00000052 0193 
+     101 00000053 E6CF                  MOV32           R0H, R1H                                        ; return uk
+         00000054 0008 
+     102 00000055 28A0                  MOV                     AR0, #0x12                                      ; AR0 = 18
+         00000056 0012 
+     103 00000057 E203                  MOV32           *+XAR4[AR0], R3H                        ; save i14
+         00000058 0394 
+     104                      .if FASTCR_PID_C1 = 0
+     105 00000059 E2AE                  MOV32           R7H, *--SP, UNC
+         0000005a 07BE 
+     106 0000005b E2AE                  MOV32           R6H, *--SP, UNC
+         0000005c 06BE 
+     107 0000005d E2AE              MOV32       R5H, *--SP, UNC
+         0000005e 05BE 
+     108 0000005f E2AE              MOV32       R4H, *--SP, UNC
+         00000060 04BE 
+     109                      .else
+     110                              RESTORE
+     111                      .endif
+     112 00000061 8BBE              MOVL                XAR1, *--SP
+     113 00000062 0006                  LRETR
+     114                              .endasmfunc
+     115              
+     116                              .end
+
+No Assembly Errors, No Assembly Warnings

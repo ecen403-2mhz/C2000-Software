@@ -1,0 +1,878 @@
+******************************************************************************
+             TMS320C2000 Linker PC v22.6.1                     
+******************************************************************************
+>> Linked Thu Mar 28 17:35:27 2024
+
+OUTPUT FILE NAME:   <llc_capstone_F28003x.out>
+ENTRY POINT SYMBOL: "code_start"  address: 00080000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  BOOT_RSVD             00000002   00000126  00000000  00000126  RWIX
+  RAMM0                 00000128   000002d8  00000000  000002d8  RWIX
+  RAMM1                 00000400   000003f8  00000000  000003f8  RWIX
+  RAMLS0                00008000   00000800  00000000  00000800  RWIX
+  RAMLS1                00008800   00000800  00000400  00000400  RWIX
+  RAMLS2                00009000   00000800  00000000  00000800  RWIX
+  RAMLS3LS4             00009800   00001000  00000274  00000d8c  RWIX
+  RAMLS5                0000a800   00000800  00000000  00000800  RWIX
+  RAMLS6                0000b000   00000800  00000000  00000800  RWIX
+  RAMLS7                0000b800   00000800  00000106  000006fa  RWIX
+  RAMGS0GS1             0000c000   00002000  00000064  00001f9c  RWIX
+  RAMGS2                0000e000   00001000  00000000  00001000  RWIX
+  RAMGS3                0000f000   00000ff8  00000000  00000ff8  RWIX
+  BEGIN                 00080000   00000002  00000002  00000000  RWIX
+  FLASH_BANK0_SEC0      00080002   00000ffe  00000000  00000ffe  RWIX
+  FLASH_BANK0_SEC1      00081000   00001000  00000044  00000fbc  RWIX
+  FLASH_BANK0_SEC2      00082000   00001000  00001000  00000000  RWIX
+  FLASH_BANK0_SEC3      00083000   00001000  0000067a  00000986  RWIX
+  FLASH_BANK0_SEC4      00084000   00001000  00000010  00000ff0  RWIX
+  FLASH_BANK0_SEC5      00085000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC6      00086000   00001000  00000064  00000f9c  RWIX
+  FLASH_BANK0_SEC7      00087000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC8      00088000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC9      00089000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC10     0008a000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC11     0008b000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC12     0008c000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC13     0008d000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC14     0008e000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC15     0008f000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC0      00090000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC1      00091000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC2      00092000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC3      00093000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC4      00094000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC5      00095000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC6      00096000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC7      00097000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC8_9_10 00098000   00003000  00000274  00002d8c  RWIX
+  FLASH_BANK1_SEC11     0009b000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC12     0009c000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC13     0009d000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC14     0009e000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC15     0009f000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC0      000a0000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC1      000a1000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC2      000a2000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC3      000a3000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC4      000a4000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC5      000a5000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC6      000a6000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC7      000a7000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC8      000a8000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC9      000a9000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC10     000aa000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC11     000ab000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC12     000ac000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC13     000ad000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC14     000ae000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC15     000af000   00000ff0  00000000  00000ff0  RWIX
+  SECURE_ROM            003f2000   00006000  00000000  00006000  RWIX
+  BOOTROM               003f8000   00007fc0  00000000  00007fc0  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+codestart 
+*          0    00080000    00000002     
+                  00080000    00000002     f28003x_codestartbranch.obj (codestart)
+
+.cinit     0    00081000    00000044     
+                  00081000    00000013     (.cinit..data.load) [load image, compression = lzss]
+                  00081013    00000013     (.cinit.controlVariables.load) [load image, compression = lzss]
+                  00081026    00000006     (__TI_handler_table)
+                  0008102c    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  00081030    00000004     (.cinit..scratchpad.load) [load image, compression = zero_init]
+                  00081034    00000010     (__TI_cinit_table)
+
+.reset     0    003fffc0    00000000     DSECT
+
+.stack     0    00008800    00000400     UNINITIALIZED
+                  00008800    00000400     --HOLE--
+
+.init_array 
+*          0    00081000    00000000     UNINITIALIZED
+
+.bss       0    0000b8f0    00000016     UNINITIALIZED
+                  0000b8f0    0000000a     llc_main.obj (.bss)
+                  0000b8fa    00000004     llc_main.obj (.bss:vTimer0)
+                  0000b8fe    00000004     llc_main.obj (.bss:vTimer1)
+                  0000b902    00000004     llc_main.obj (.bss:vTimer2)
+
+.const_cla 
+*          0    00009800    00000000     UNINITIALIZED
+
+dclfuncs   0    00009800    00000000     UNINITIALIZED
+
+isrcodefuncs 
+*          0    00009800    00000000     UNINITIALIZED
+
+.data      0    0000b878    00000054     UNINITIALIZED
+                  0000b878    00000020     clb_config.obj (.data:TILE0HLCInstr)
+                  0000b898    00000020     clb_config.obj (.data:TILE1HLCInstr)
+                  0000b8b8    00000006     llc_hal.obj (.data)
+                  0000b8be    00000002     rts2800_fpu32_eabi.lib : _lock.c.obj (.data:_lock)
+                  0000b8c0    00000006                            : exit.c.obj (.data)
+                  0000b8c6    00000004     llc.obj (.data)
+                  0000b8ca    00000002     rts2800_fpu32_eabi.lib : _lock.c.obj (.data:_unlock)
+
+.const     0    00084000    00000010     
+                  00084000    00000008     clb_config.obj (.const:TILE0_HLC_initFIFOData)
+                  00084008    00000008     clb_config.obj (.const:TILE1_HLC_initFIFOData)
+
+.TI.memcrc 
+*          0    00000000    00000120     COPY SECTION
+                  00000000    00000120     (.TI.memcrc:_table_name)
+
+.TI.ramfunc 
+*          0    00086000    0000004f     RUN ADDR = 0000c000
+                  00086000    0000004b     driverlib.lib : flash.obj (.TI.ramfunc:Flash_initModule)
+                  0008604b    00000004                   : sysctl.obj (.TI.ramfunc)
+
+dclfuncs   0    00086050    00000014     RUN ADDR = 0000c050
+                  00086050    00000014     DCL_clamp_C1.obj (dclfuncs)
+
+.scratchpad 
+*          0    0000b8cc    00000024     UNINITIALIZED
+                  0000b8cc    00000020     llc_clatask.obj (.scratchpad:Cla1Prog:Cla1Task1)
+                  0000b8ec    00000004     DCL_clamp_L1.obj (.scratchpad:Cla1Prog:_DCL_clamp_L1_LSECT)
+                  0000b8ec    00000004     llc_clatask.obj (.scratchpad:Cla1Prog:EPWM_setCounterCompareValue)
+
+controlVariables 
+*          0    0000b800    00000078     UNINITIALIZED
+                  0000b800    0000006e     llc.obj (controlVariables:init)
+                  0000b86e    0000000a     llc.obj (controlVariables:uninit)
+
+Cla1Prog   0    00098000    00000274     RUN ADDR = 00009800
+                  00098000    000001f8     llc_clatask.obj (Cla1Prog:Cla1Task1)
+                  000981f8    0000004c     llc_clatask.obj (Cla1Prog:EPWM_setCounterCompareValue)
+                  00098244    0000001a     DCL_clamp_L1.obj (Cla1Prog:_DCL_clamp_L1_LSECT)
+                  0009825e    00000016     llc_clatask.obj (Cla1Prog:Cla1BackgroundTask)
+
+.text.1    0    00082000    00001000     
+                  00082000    0000023e     board.obj (.text:EPWM_init)
+                  0008223e    00000113     driverlib.lib : sysctl.obj (.text:SysCtl_setClock)
+                  00082351    0000010e     board.obj (.text:CLB_SR_init)
+                  0008245f    000000e9     driverlib.lib : sysctl.obj (.text:SysCtl_isPLLValid)
+                  00082548    000000e6     clb_config.obj (.text:initTILE0)
+                  0008262e    000000d6     board.obj (.text:CLB_SYN_init)
+                  00082704    000000d5     clb_config.obj (.text:initTILE1)
+                  000827d9    000000d3     device.obj (.text:Device_enableAllPeripherals)
+                  000828ac    000000b1     llc_hal.obj (.text:LLC_HAL_setupADC)
+                  0008295d    000000aa     llc.obj (.text:LLC_updateDeadband)
+                  00082a07    000000a5     llc_hal.obj (.text:LLC_HAL_setupPWM_upDownCount)
+                  00082aac    00000088     rts2800_fpu32_eabi.lib : fs_div28.asm.obj (.text)
+                  00082b34    00000079     llc_hal.obj (.text:LLC_HAL_setupDevice)
+                  00082bad    00000075     llc_hal.obj (.text:LLC_HAL_setupPWM)
+                  00082c22    0000006c     llc_main.obj (.text:C1)
+                  00082c8e    0000006c     llc_hal.obj (.text:LLC_HAL_setupBoardProtection)
+                  00082cfa    00000066     llc_main.obj (.text:C2)
+                  00082d60    00000060     llc_hal.obj (.text:LLC_HAL_setupCLA)
+                  00082dc0    00000059     driverlib.lib : clb.obj (.text:CLB_configCounterLoadMatch)
+                  00082e19    00000053     llc.obj (.text:LLC_systemStartUp)
+                  00082e6c    0000004c     llc_hal.obj (.text:LLC_HAL_setupPWMTrip)
+                  00082eb8    0000004a     llc_main.obj (.text:fsiRxInt2ISR)
+                  00082f02    00000046     device.obj (.text:Device_init)
+                  00082f48    00000045     driverlib.lib : gpio.obj (.text:GPIO_setAnalogMode)
+                  00082f8d    00000042     llc_main.obj (.text:fsiTxInt2ISR)
+                  00082fcf    00000030     driverlib.lib : gpio.obj (.text:GPIO_setPinConfig)
+                  00082fff    00000001     llc.obj (.text:LLC_runSFRABackgroundTask)
+
+.text.2    0    00083000    0000067a     
+                  00083000    00000041     driverlib.lib : interrupt.obj (.text:Interrupt_initModule)
+                  00083041    0000003f                   : gpio.obj (.text:GPIO_setPadConfig)
+                  00083080    0000003e                   : sysctl.obj (.text:SysCtl_pollX1Counter)
+                  000830be    0000003e                   : sysctl.obj (.text:SysCtl_selectXTAL)
+                  000830fc    0000003a     board.obj (.text:PinMux_init)
+                  00083136    00000038     llc_hal.obj (.text:LLC_HAL_setupTimerPWM)
+                  0008316e    00000035     llc_main.obj (.text:main)
+                  000831a3    00000030     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  000831d3    0000002d     driverlib.lib : sysctl.obj (.text:SysCtl_selectOscSource)
+                  00083200    0000002b                   : xbar.obj (.text:XBAR_setEPWMMuxConfig)
+                  0008322b    0000002b     rts2800_fpu32_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00083256    00000029                            : exit.c.obj (.text)
+                  0008327f    00000026     llc.obj (.text:LLC_HAL_Handshake_Node)
+                  000832a5    00000025     driverlib.lib : memcfg.obj (.text:MemCfg_setLSRAMControllerSel)
+                  000832ca    00000025                   : xbar.obj (.text:XBAR_setOutputMuxConfig)
+                  000832ef    00000023     llc.obj (.text:LLC_slew)
+                  00083312    00000023     llc_main.obj (.text:fsiRxInt1ISR)
+                  00083335    00000022     driverlib.lib : gpio.obj (.text:GPIO_setQualificationMode)
+                  00083357    00000022     llc_main.obj (.text:fsiTxInt1ISR)
+                  00083379    00000020     driverlib.lib : gpio.obj (.text:GPIO_setDirectionMode)
+                  00083399    0000001f     llc.obj (.text:LLC_initController)
+                  000833b8    0000001e     driverlib.lib : sysctl.obj (.text:SysCtl_selectXTALSingleEnded)
+                  000833d6    0000001d     rts2800_fpu32_eabi.lib : memcpy.c.obj (.text)
+                  000833f3    0000001c     driverlib.lib : cla.obj (.text:CLA_setTriggerSource)
+                  0008340f    0000001b     llc_hal.obj (.text:LLC_HAL_setupPWMtoTriggerADCSOC)
+                  0008342a    0000001a     driverlib.lib : adc.obj (.text:ADC_setOffsetTrimAll)
+                  00083444    00000019                   : adc.obj (.text:ADC_setVREF)
+                  0008345d    00000018     llc_main.obj (.text:A0)
+                  00083475    00000018     llc_main.obj (.text:B0)
+                  0008348d    00000018     llc_main.obj (.text:C0)
+                  000834a5    00000018     driverlib.lib : clb.obj (.text:CLB_writeFIFOs)
+                  000834bd    00000017     llc_hal.obj (.text:LLC_HAL_clearTripZoneFlags)
+                  000834d4    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
+                  000834eb    00000015     driverlib.lib : interrupt.obj (.text:Interrupt_initVectorTable)
+                  00083500    00000015     llc_hal.obj (.text:LLC_HAL_setupPWMpins)
+                  00083515    00000015     llc.obj (.text:LLC_writeVolatileFloat)
+                  0008352a    00000014     llc_hal.obj (.text:LLC_HAL_setupInterrupts)
+                  0008353e    00000012     llc_main.obj (.text:A2)
+                  00083550    00000012     driverlib.lib : clb.obj (.text:CLB_clearFIFOs)
+                  00083562    00000011     board.obj (.text:SYNC_init)
+                  00083573    00000010     device.obj (.text:Device_initGPIO)
+                  00083583    00000010     llc_hal.obj (.text:LLC_HAL_setupCmpssLPTripLimit)
+                  00083593    0000000f     llc_hal.obj (.text:LLC_HAL_setupCmpssHPTripLimit)
+                  000835a2    0000000e     llc_hal.obj (.text:LLC_HAL_toggleLED)
+                  000835b0    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  000835bd    0000000c     driverlib.lib : interrupt.obj (.text:Interrupt_defaultHandler)
+                  000835c9    0000000c     rts2800_fpu32_eabi.lib : args_main.c.obj (.text)
+                  000835d5    0000000b     board.obj (.text:Board_init)
+                  000835e0    0000000b     driverlib.lib : fsi.obj (.text:FSI_executeTxFlushSequence)
+                  000835eb    0000000a                   : interrupt.obj (.text:Interrupt_illegalOperationHandler)
+                  000835f5    0000000a                   : interrupt.obj (.text:Interrupt_nmiHandler)
+                  000835ff    0000000a     llc_hal.obj (.text:LLC_HAL_setupLED)
+                  00083609    00000009     driverlib.lib : epwm.obj (.text:EPWM_setEmulationMode)
+                  00083612    00000009     llc_hal.obj (.text:LLC_HAL_disablePWMClkCounting)
+                  0008361b    00000009     llc_hal.obj (.text:LLC_HAL_setupDebugGPIO)
+                  00083624    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
+                  0008362d    00000008     llc_main.obj (.text:A1)
+                  00083635    00000008     llc_main.obj (.text:A3)
+                  0008363d    00000008     llc_main.obj (.text:B2)
+                  00083645    00000008     llc_hal.obj (.text:LLC_HAL_enablePWMClkCounting)
+                  0008364d    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  00083655    00000008     f28003x_codestartbranch.obj (.text)
+                  0008365d    00000006     llc_main.obj (.text:B1)
+                  00083663    00000006     llc_main.obj (.text:B3)
+                  00083669    00000006     driverlib.lib : cputimer.obj (.text:CPUTimer_setEmulationMode)
+                  0008366f    00000005     board.obj (.text:CLB_init)
+                  00083674    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+                  00083676    00000001     llc.obj (.text:LLC_serviceSFRAGuiSci)
+                  00083677    00000001     llc.obj (.text:LLC_setupSFRA)
+                  00083678    00000001     llc.obj (.text:LLC_setupSFRAGui)
+                  00083679    00000001     rts2800_fpu32_eabi.lib : startup.c.obj (.text)
+
+MODULE SUMMARY
+
+       Module                        code   ro data   rw data
+       ------                        ----   -------   -------
+    .\
+       llc_clatask.obj               1204   0         36     
+       llc_hal.obj                   1088   0         6      
+       llc_main.obj                  598    0         22     
+       llc.obj                       382    0         124    
+    +--+-----------------------------+------+---------+---------+
+       Total:                        3272   0         188    
+                                                             
+    .\device\
+       device.obj                    297    0         0      
+       f28003x_codestartbranch.obj   10     0         0      
+    +--+-----------------------------+------+---------+---------+
+       Total:                        307    0         0      
+                                                             
+    .\libraries\DCL\
+       DCL_clamp_L1.obj              52     0         4      
+       DCL_clamp_C1.obj              40     0         0      
+    +--+-----------------------------+------+---------+---------+
+       Total:                        92     0         4      
+                                                             
+    .\syscfg\
+       board.obj                     1149   0         0      
+       clb_config.obj                443    16        64     
+    +--+-----------------------------+------+---------+---------+
+       Total:                        1592   16        64     
+                                                             
+    C:/Users/Joel9/Downloads/llc_capstone_F28003/llc_capstone_F28003x/device/driverlib/ccs/Release/driverlib.lib
+       sysctl.obj                    715    0         0      
+       gpio.obj                      246    0         0      
+       flash.obj                     150    0         0      
+       clb.obj                       131    0         0      
+       interrupt.obj                 118    0         0      
+       xbar.obj                      80     0         0      
+       adc.obj                       51     0         0      
+       memcfg.obj                    37     0         0      
+       cla.obj                       28     0         0      
+       fsi.obj                       11     0         0      
+       epwm.obj                      9      0         0      
+       cputimer.obj                  6      0         0      
+    +--+-----------------------------+------+---------+---------+
+       Total:                        1582   0         0      
+                                                             
+    C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/lib/rts2800_fpu32_eabi.lib
+       fs_div28.asm.obj              136    0         0      
+       copy_decompress_lzss.c.obj    48     0         0      
+       exit.c.obj                    41     0         6      
+       autoinit.c.obj                43     0         0      
+       memcpy.c.obj                  29     0         0      
+       boot28.asm.obj                23     0         0      
+       _lock.c.obj                   9      0         4      
+       copy_zero_init.c.obj          13     0         0      
+       args_main.c.obj               12     0         0      
+       copy_decompress_none.c.obj    8      0         0      
+       pre_init.c.obj                2      0         0      
+       startup.c.obj                 1      0         0      
+    +--+-----------------------------+------+---------+---------+
+       Total:                        365    0         10     
+                                                             
+       Stack:                        0      0         1024   
+       Linker Generated:             0      68        0      
+    +--+-----------------------------+------+---------+---------+
+       Grand Total:                  7210   84        1290   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00081034 records: 4, size/record: 4, table size: 16
+	.data: load addr=00081000, load size=00000013 bytes, run addr=0000b878, run size=00000054 bytes, compression=lzss
+	controlVariables: load addr=00081013, load size=00000013 bytes, run addr=0000b800, run size=00000078 bytes, compression=lzss
+	.bss: load addr=0008102c, load size=00000004 bytes, run addr=0000b8f0, run size=00000016 bytes, compression=zero_init
+	.scratchpad: load addr=00081030, load size=00000004 bytes, run addr=0000b8cc, run size=00000024 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00081026 records: 3, size/record: 2, table size: 6
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+LINKER GENERATED MEMRANGE CRC TABLES
+
+_table_name @ 00000000 records: 47, size/record: 6, table size: 288, algorithm=C28_CHECKSUM_16(ID=13), CRC: 0000cd8d
+	BEGIN: page=0, load addr=00080000, size=00000002
+	FLASH_BANK0_SEC0: page=0, load addr=00080002, size=00000ffe
+	FLASH_BANK0_SEC1: page=0, load addr=00081000, size=00001000
+	FLASH_BANK0_SEC2: page=0, load addr=00082000, size=00001000
+	FLASH_BANK0_SEC3: page=0, load addr=00083000, size=00001000
+	FLASH_BANK0_SEC4: page=0, load addr=00084000, size=00001000
+	FLASH_BANK0_SEC5: page=0, load addr=00085000, size=00001000
+	FLASH_BANK0_SEC6: page=0, load addr=00086000, size=00001000
+	FLASH_BANK0_SEC7: page=0, load addr=00087000, size=00001000
+	FLASH_BANK0_SEC8: page=0, load addr=00088000, size=00001000
+	FLASH_BANK0_SEC9: page=0, load addr=00089000, size=00001000
+	FLASH_BANK0_SEC10: page=0, load addr=0008a000, size=00001000
+	FLASH_BANK0_SEC11: page=0, load addr=0008b000, size=00001000
+	FLASH_BANK0_SEC12: page=0, load addr=0008c000, size=00001000
+	FLASH_BANK0_SEC13: page=0, load addr=0008d000, size=00001000
+	FLASH_BANK0_SEC14: page=0, load addr=0008e000, size=00001000
+	FLASH_BANK0_SEC15: page=0, load addr=0008f000, size=00001000
+	FLASH_BANK1_SEC0: page=0, load addr=00090000, size=00001000
+	FLASH_BANK1_SEC1: page=0, load addr=00091000, size=00001000
+	FLASH_BANK1_SEC2: page=0, load addr=00092000, size=00001000
+	FLASH_BANK1_SEC3: page=0, load addr=00093000, size=00001000
+	FLASH_BANK1_SEC4: page=0, load addr=00094000, size=00001000
+	FLASH_BANK1_SEC5: page=0, load addr=00095000, size=00001000
+	FLASH_BANK1_SEC6: page=0, load addr=00096000, size=00001000
+	FLASH_BANK1_SEC7: page=0, load addr=00097000, size=00001000
+	FLASH_BANK1_SEC8_9_10: page=0, load addr=00098000, size=00003000
+	FLASH_BANK1_SEC11: page=0, load addr=0009b000, size=00001000
+	FLASH_BANK1_SEC12: page=0, load addr=0009c000, size=00001000
+	FLASH_BANK1_SEC13: page=0, load addr=0009d000, size=00001000
+	FLASH_BANK1_SEC14: page=0, load addr=0009e000, size=00001000
+	FLASH_BANK1_SEC15: page=0, load addr=0009f000, size=00001000
+	FLASH_BANK2_SEC0: page=0, load addr=000a0000, size=00001000
+	FLASH_BANK2_SEC1: page=0, load addr=000a1000, size=00001000
+	FLASH_BANK2_SEC2: page=0, load addr=000a2000, size=00001000
+	FLASH_BANK2_SEC3: page=0, load addr=000a3000, size=00001000
+	FLASH_BANK2_SEC4: page=0, load addr=000a4000, size=00001000
+	FLASH_BANK2_SEC5: page=0, load addr=000a5000, size=00001000
+	FLASH_BANK2_SEC6: page=0, load addr=000a6000, size=00001000
+	FLASH_BANK2_SEC7: page=0, load addr=000a7000, size=00001000
+	FLASH_BANK2_SEC8: page=0, load addr=000a8000, size=00001000
+	FLASH_BANK2_SEC9: page=0, load addr=000a9000, size=00001000
+	FLASH_BANK2_SEC10: page=0, load addr=000aa000, size=00001000
+	FLASH_BANK2_SEC11: page=0, load addr=000ab000, size=00001000
+	FLASH_BANK2_SEC12: page=0, load addr=000ac000, size=00001000
+	FLASH_BANK2_SEC13: page=0, load addr=000ad000, size=00001000
+	FLASH_BANK2_SEC14: page=0, load addr=000ae000, size=00001000
+	FLASH_BANK2_SEC15: page=0, load addr=000af000, size=00000ff0
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00008800     220 (00008800)     __stack
+
+0000b800     2e0 (0000b800)     LLC_PWMDbRedPri
+0000b801     2e0 (0000b800)     LLC_PWMDbFedPri
+0000b802     2e0 (0000b800)     LLC_enable
+0000b803     2e0 (0000b800)     LLC_startupDutySlewFlag
+0000b804     2e0 (0000b800)     LLC_SRenable
+0000b805     2e0 (0000b800)     LLC_txEventSts
+0000b806     2e0 (0000b800)     LLC_rxEventSts
+0000b807     2e0 (0000b800)     LLC_buildLevel
+0000b808     2e0 (0000b800)     LLC_startFlag
+0000b809     2e0 (0000b800)     LLC_faultFlag
+0000b80a     2e0 (0000b800)     LLC_vSec_pu
+0000b80c     2e0 (0000b800)     LLC_iPriReso_pu
+0000b80e     2e0 (0000b800)     LLC_iSec_pu
+0000b810     2e0 (0000b800)     LLC_vSecSet_pu
+0000b812     2e0 (0000b800)     LLC_periodSet_pu
+0000b814     2e0 (0000b800)     LLC_vSecSetSlewed_pu
+0000b816     2e0 (0000b800)     LLC_periodSetSlewed_pu
+0000b818     2e0 (0000b800)     LLC_vSecRef_pu
+0000b81a     2e0 (0000b800)     LLC_periodRef_pu
+0000b81c     2e0 (0000b800)     LLC_dutySet_pu
+0000b81e     2e0 (0000b800)     LLC_dutyBase_pu
+0000b820     2e0 (0000b800)     LLC_fsiTxInt1Received
+0000b822     2e0 (0000b800)     LLC_fsiTxInt2Received
+0000b824     2e0 (0000b800)     LLC_fsiRxInt1Received
+0000b826     2e0 (0000b800)     LLC_fsiRxInt2Received
+0000b828     2e0 (0000b800)     LLC_vSec_Volts
+0000b82a     2e0 (0000b800)     LLC_iPriReso_Amps
+0000b82c     2e0 (0000b800)     LLC_iSec_Amps
+0000b82e     2e0 (0000b800)     LLC_periodRef_debug_pu
+0000b830     2e0 (0000b800)     LLC_dutySet_debug_pu
+0000b832     2e0 (0000b800)     LLC_vSecRef_debug_Volts
+
+0000b840     2e1 (0000b840)     LLC_ctrl_DF22
+0000b852     2e1 (0000b840)     LLC_ctrl_PID
+0000b86e     2e1 (0000b840)     LLC_board_Status
+0000b870     2e1 (0000b840)     clamp_duty
+0000b872     2e1 (0000b840)     SR_deadtime
+0000b874     2e1 (0000b840)     uk
+0000b876     2e1 (0000b840)     ek
+0000b878     2e1 (0000b840)     TILE0HLCInstr
+
+0000b898     2e2 (0000b880)     TILE1HLCInstr
+0000b8b8     2e2 (0000b880)     nLanes
+0000b8ba     2e2 (0000b880)     txBufAddr
+0000b8bc     2e2 (0000b880)     rxBufAddr
+0000b8be     2e2 (0000b880)     _lock
+
+0000b8c0     2e3 (0000b8c0)     __TI_enable_exit_profile_output
+0000b8c2     2e3 (0000b8c0)     __TI_cleanup_ptr
+0000b8c4     2e3 (0000b8c0)     __TI_dtors_ptr
+0000b8ca     2e3 (0000b8c0)     _unlock
+0000b8ec     2e3 (0000b8c0)     __cla_DCL_clamp_L1_sp
+0000b8f0     2e3 (0000b8c0)     isr1Ticker
+0000b8f2     2e3 (0000b8c0)     Alpha_State_Ptr
+0000b8f4     2e3 (0000b8c0)     A_Task_Ptr
+0000b8f6     2e3 (0000b8c0)     B_Task_Ptr
+0000b8f8     2e3 (0000b8c0)     C_Task_Ptr
+0000b8fa     2e3 (0000b8c0)     vTimer0
+0000b8fe     2e3 (0000b8c0)     vTimer1
+
+0000b902     2e4 (0000b900)     vTimer2
+
+00084000    2100 (00084000)     TILE0_HLC_initFIFOData
+00084008    2100 (00084000)     TILE1_HLC_initFIFOData
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                             
+----  -------   ----                             
+0     0008345d  A0                               
+0     0008362d  A1                               
+0     0008353e  A2                               
+0     00083635  A3                               
+0     0008342a  ADC_setOffsetTrimAll             
+0     00083444  ADC_setVREF                      
+0     0000b8f4  A_Task_Ptr                       
+0     0000b8f2  Alpha_State_Ptr                  
+0     00083475  B0                               
+0     0008365d  B1                               
+0     0008363d  B2                               
+0     00083663  B3                               
+0     0000b8f6  B_Task_Ptr                       
+0     000835d5  Board_init                       
+0     00083256  C$$EXIT                          
+0     0008348d  C0                               
+0     00082c22  C1                               
+0     00082cfa  C2                               
+0     000833f3  CLA_setTriggerSource             
+0     00082351  CLB_SR_init                      
+0     0008262e  CLB_SYN_init                     
+0     00083550  CLB_clearFIFOs                   
+0     00082dc0  CLB_configCounterLoadMatch       
+0     0008366f  CLB_init                         
+0     000834a5  CLB_writeFIFOs                   
+0     00083669  CPUTimer_setEmulationMode        
+0     0000b8f8  C_Task_Ptr                       
+0     00009a5e  Cla1BackgroundTask               
+abs   00000000  Cla1ConstLoadSize                
+0     00009800  Cla1ConstLoadStart               
+0     00009800  Cla1ConstRunStart                
+abs   00000274  Cla1ProgLoadSize                 
+0     00098000  Cla1ProgLoadStart                
+0     00009800  Cla1ProgRunStart                 
+0     00009800  Cla1Task1                        
+0     0000c050  DCL_runClamp_C1                  
+0     00009a44  DCL_runClamp_L1                  
+0     000827d9  Device_enableAllPeripherals      
+0     00082f02  Device_init                      
+0     00083573  Device_initGPIO                  
+0     00082000  EPWM_init                        
+0     00083609  EPWM_setEmulationMode            
+0     000835e0  FSI_executeTxFlushSequence       
+0     0000c000  Flash_initModule                 
+0     00082f48  GPIO_setAnalogMode               
+0     00083379  GPIO_setDirectionMode            
+0     00083041  GPIO_setPadConfig                
+0     00082fcf  GPIO_setPinConfig                
+0     00083335  GPIO_setQualificationMode        
+0     000835bd  Interrupt_defaultHandler         
+0     000835eb  Interrupt_illegalOperationHandler
+0     00083000  Interrupt_initModule             
+0     000834eb  Interrupt_initVectorTable        
+0     000835f5  Interrupt_nmiHandler             
+0     0008327f  LLC_HAL_Handshake_Node           
+0     000834bd  LLC_HAL_clearTripZoneFlags       
+0     00083612  LLC_HAL_disablePWMClkCounting    
+0     00083645  LLC_HAL_enablePWMClkCounting     
+0     000828ac  LLC_HAL_setupADC                 
+0     00082c8e  LLC_HAL_setupBoardProtection     
+0     00082d60  LLC_HAL_setupCLA                 
+0     00083593  LLC_HAL_setupCmpssHPTripLimit    
+0     00083583  LLC_HAL_setupCmpssLPTripLimit    
+0     0008361b  LLC_HAL_setupDebugGPIO           
+0     00082b34  LLC_HAL_setupDevice              
+0     0008352a  LLC_HAL_setupInterrupts          
+0     000835ff  LLC_HAL_setupLED                 
+0     00082bad  LLC_HAL_setupPWM                 
+0     00082e6c  LLC_HAL_setupPWMTrip             
+0     00082a07  LLC_HAL_setupPWM_upDownCount     
+0     00083500  LLC_HAL_setupPWMpins             
+0     0008340f  LLC_HAL_setupPWMtoTriggerADCSOC  
+0     00083136  LLC_HAL_setupTimerPWM            
+0     000835a2  LLC_HAL_toggleLED                
+0     0000b801  LLC_PWMDbFedPri                  
+0     0000b800  LLC_PWMDbRedPri                  
+0     0000b804  LLC_SRenable                     
+0     0000b86e  LLC_board_Status                 
+0     0000b807  LLC_buildLevel                   
+0     0000b840  LLC_ctrl_DF22                    
+0     0000b852  LLC_ctrl_PID                     
+0     0000b81e  LLC_dutyBase_pu                  
+0     0000b830  LLC_dutySet_debug_pu             
+0     0000b81c  LLC_dutySet_pu                   
+0     0000b802  LLC_enable                       
+0     0000b809  LLC_faultFlag                    
+0     0000b824  LLC_fsiRxInt1Received            
+0     0000b826  LLC_fsiRxInt2Received            
+0     0000b820  LLC_fsiTxInt1Received            
+0     0000b822  LLC_fsiTxInt2Received            
+0     0000b82a  LLC_iPriReso_Amps                
+0     0000b80c  LLC_iPriReso_pu                  
+0     0000b82c  LLC_iSec_Amps                    
+0     0000b80e  LLC_iSec_pu                      
+0     00083399  LLC_initController               
+0     0000b82e  LLC_periodRef_debug_pu           
+0     0000b81a  LLC_periodRef_pu                 
+0     0000b816  LLC_periodSetSlewed_pu           
+0     0000b812  LLC_periodSet_pu                 
+0     00082fff  LLC_runSFRABackgroundTask        
+0     0000b806  LLC_rxEventSts                   
+0     00083676  LLC_serviceSFRAGuiSci            
+0     00083677  LLC_setupSFRA                    
+0     00083678  LLC_setupSFRAGui                 
+0     000832ef  LLC_slew                         
+0     0000b808  LLC_startFlag                    
+0     0000b803  LLC_startupDutySlewFlag          
+0     00082e19  LLC_systemStartUp                
+0     0000b805  LLC_txEventSts                   
+0     0008295d  LLC_updateDeadband               
+0     0000b832  LLC_vSecRef_debug_Volts          
+0     0000b818  LLC_vSecRef_pu                   
+0     0000b814  LLC_vSecSetSlewed_pu             
+0     0000b810  LLC_vSecSet_pu                   
+0     0000b828  LLC_vSec_Volts                   
+0     0000b80a  LLC_vSec_pu                      
+0     00083515  LLC_writeVolatileFloat           
+0     000832a5  MemCfg_setLSRAMControllerSel     
+0     000830fc  PinMux_init                      
+abs   00086064  RamfuncsLoadEnd                  
+abs   00000064  RamfuncsLoadSize                 
+abs   00086000  RamfuncsLoadStart                
+abs   0000c064  RamfuncsRunEnd                   
+abs   00000064  RamfuncsRunSize                  
+abs   0000c000  RamfuncsRunStart                 
+0     0000b872  SR_deadtime                      
+0     00083562  SYNC_init                        
+0     0000c04b  SysCtl_delay                     
+0     0008245f  SysCtl_isPLLValid                
+0     000831d3  SysCtl_selectOscSource           
+0     000830be  SysCtl_selectXTAL                
+0     000833b8  SysCtl_selectXTALSingleEnded     
+0     0008223e  SysCtl_setClock                  
+0     0000b878  TILE0HLCInstr                    
+0     00084000  TILE0_HLC_initFIFOData           
+0     0000b898  TILE1HLCInstr                    
+0     00084008  TILE1_HLC_initFIFOData           
+0     00083200  XBAR_setEPWMMuxConfig            
+0     000832ca  XBAR_setOutputMuxConfig          
+0     00081034  __TI_CINIT_Base                  
+0     00081044  __TI_CINIT_Limit                 
+0     00081044  __TI_CINIT_Warm                  
+0     00081026  __TI_Handler_Table_Base          
+0     0008102c  __TI_Handler_Table_Limit         
+0     00000000  __TI_MEMRANGE_CRC__table_name    
+0     00008c00  __TI_STACK_END                   
+abs   00000400  __TI_STACK_SIZE                  
+0     0008322b  __TI_auto_init_nobinit_nopinit   
+0     0000b8c2  __TI_cleanup_ptr                 
+0     000831a3  __TI_decompress_lzss             
+0     0008364d  __TI_decompress_none             
+0     0000b8c4  __TI_dtors_ptr                   
+0     0000b8c0  __TI_enable_exit_profile_output  
+abs   ffffffff  __TI_pprof_out_hndl              
+abs   ffffffff  __TI_prof_data_size              
+abs   ffffffff  __TI_prof_data_start             
+0     000835b0  __TI_zero_init_nomemset          
+0     00082aac  __c28xabi_divf                   
+n/a   UNDEFED   __c_args__                       
+0     0000b8ec  __cla_DCL_clamp_L1_sp            
+0     00008800  __stack                          
+0     000835c9  _args_main                       
+0     000834d4  _c_int00                         
+0     0000b8be  _lock                            
+0     0008362c  _nop                             
+0     00083628  _register_lock                   
+0     00083624  _register_unlock                 
+0     00083679  _system_post_cinit               
+0     00083674  _system_pre_init                 
+0     00000000  _table_name                      
+0     0000b8ca  _unlock                          
+0     00083256  abort                            
+0     0000b870  clamp_duty                       
+0     00080000  code_start                       
+0     0000b876  ek                               
+0     00083258  exit                             
+0     00083312  fsiRxInt1ISR                     
+0     00082eb8  fsiRxInt2ISR                     
+0     00083357  fsiTxInt1ISR                     
+0     00082f8d  fsiTxInt2ISR                     
+0     00082548  initTILE0                        
+0     00082704  initTILE1                        
+0     0000b8f0  isr1Ticker                       
+abs   00009800  isrcodefuncsLoadEnd              
+abs   00000000  isrcodefuncsLoadSize             
+abs   00009800  isrcodefuncsLoadStart            
+abs   00009800  isrcodefuncsRunEnd               
+abs   00000000  isrcodefuncsRunSize              
+abs   00009800  isrcodefuncsRunStart             
+0     0008316e  main                             
+0     000833d6  memcpy                           
+0     0000b8b8  nLanes                           
+0     0000b8bc  rxBufAddr                        
+0     0000b8ba  txBufAddr                        
+0     0000b874  uk                               
+0     0000b8fa  vTimer0                          
+0     0000b8fe  vTimer1                          
+0     0000b902  vTimer2                          
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                             
+----  -------   ----                             
+0     00000000  __TI_MEMRANGE_CRC__table_name    
+0     00000000  _table_name                      
+0     00008800  __stack                          
+0     00008c00  __TI_STACK_END                   
+0     00009800  Cla1ConstLoadStart               
+0     00009800  Cla1ConstRunStart                
+0     00009800  Cla1ProgRunStart                 
+0     00009800  Cla1Task1                        
+0     00009a44  DCL_runClamp_L1                  
+0     00009a5e  Cla1BackgroundTask               
+0     0000b800  LLC_PWMDbRedPri                  
+0     0000b801  LLC_PWMDbFedPri                  
+0     0000b802  LLC_enable                       
+0     0000b803  LLC_startupDutySlewFlag          
+0     0000b804  LLC_SRenable                     
+0     0000b805  LLC_txEventSts                   
+0     0000b806  LLC_rxEventSts                   
+0     0000b807  LLC_buildLevel                   
+0     0000b808  LLC_startFlag                    
+0     0000b809  LLC_faultFlag                    
+0     0000b80a  LLC_vSec_pu                      
+0     0000b80c  LLC_iPriReso_pu                  
+0     0000b80e  LLC_iSec_pu                      
+0     0000b810  LLC_vSecSet_pu                   
+0     0000b812  LLC_periodSet_pu                 
+0     0000b814  LLC_vSecSetSlewed_pu             
+0     0000b816  LLC_periodSetSlewed_pu           
+0     0000b818  LLC_vSecRef_pu                   
+0     0000b81a  LLC_periodRef_pu                 
+0     0000b81c  LLC_dutySet_pu                   
+0     0000b81e  LLC_dutyBase_pu                  
+0     0000b820  LLC_fsiTxInt1Received            
+0     0000b822  LLC_fsiTxInt2Received            
+0     0000b824  LLC_fsiRxInt1Received            
+0     0000b826  LLC_fsiRxInt2Received            
+0     0000b828  LLC_vSec_Volts                   
+0     0000b82a  LLC_iPriReso_Amps                
+0     0000b82c  LLC_iSec_Amps                    
+0     0000b82e  LLC_periodRef_debug_pu           
+0     0000b830  LLC_dutySet_debug_pu             
+0     0000b832  LLC_vSecRef_debug_Volts          
+0     0000b840  LLC_ctrl_DF22                    
+0     0000b852  LLC_ctrl_PID                     
+0     0000b86e  LLC_board_Status                 
+0     0000b870  clamp_duty                       
+0     0000b872  SR_deadtime                      
+0     0000b874  uk                               
+0     0000b876  ek                               
+0     0000b878  TILE0HLCInstr                    
+0     0000b898  TILE1HLCInstr                    
+0     0000b8b8  nLanes                           
+0     0000b8ba  txBufAddr                        
+0     0000b8bc  rxBufAddr                        
+0     0000b8be  _lock                            
+0     0000b8c0  __TI_enable_exit_profile_output  
+0     0000b8c2  __TI_cleanup_ptr                 
+0     0000b8c4  __TI_dtors_ptr                   
+0     0000b8ca  _unlock                          
+0     0000b8ec  __cla_DCL_clamp_L1_sp            
+0     0000b8f0  isr1Ticker                       
+0     0000b8f2  Alpha_State_Ptr                  
+0     0000b8f4  A_Task_Ptr                       
+0     0000b8f6  B_Task_Ptr                       
+0     0000b8f8  C_Task_Ptr                       
+0     0000b8fa  vTimer0                          
+0     0000b8fe  vTimer1                          
+0     0000b902  vTimer2                          
+0     0000c000  Flash_initModule                 
+0     0000c04b  SysCtl_delay                     
+0     0000c050  DCL_runClamp_C1                  
+0     00080000  code_start                       
+0     00081026  __TI_Handler_Table_Base          
+0     0008102c  __TI_Handler_Table_Limit         
+0     00081034  __TI_CINIT_Base                  
+0     00081044  __TI_CINIT_Limit                 
+0     00081044  __TI_CINIT_Warm                  
+0     00082000  EPWM_init                        
+0     0008223e  SysCtl_setClock                  
+0     00082351  CLB_SR_init                      
+0     0008245f  SysCtl_isPLLValid                
+0     00082548  initTILE0                        
+0     0008262e  CLB_SYN_init                     
+0     00082704  initTILE1                        
+0     000827d9  Device_enableAllPeripherals      
+0     000828ac  LLC_HAL_setupADC                 
+0     0008295d  LLC_updateDeadband               
+0     00082a07  LLC_HAL_setupPWM_upDownCount     
+0     00082aac  __c28xabi_divf                   
+0     00082b34  LLC_HAL_setupDevice              
+0     00082bad  LLC_HAL_setupPWM                 
+0     00082c22  C1                               
+0     00082c8e  LLC_HAL_setupBoardProtection     
+0     00082cfa  C2                               
+0     00082d60  LLC_HAL_setupCLA                 
+0     00082dc0  CLB_configCounterLoadMatch       
+0     00082e19  LLC_systemStartUp                
+0     00082e6c  LLC_HAL_setupPWMTrip             
+0     00082eb8  fsiRxInt2ISR                     
+0     00082f02  Device_init                      
+0     00082f48  GPIO_setAnalogMode               
+0     00082f8d  fsiTxInt2ISR                     
+0     00082fcf  GPIO_setPinConfig                
+0     00082fff  LLC_runSFRABackgroundTask        
+0     00083000  Interrupt_initModule             
+0     00083041  GPIO_setPadConfig                
+0     000830be  SysCtl_selectXTAL                
+0     000830fc  PinMux_init                      
+0     00083136  LLC_HAL_setupTimerPWM            
+0     0008316e  main                             
+0     000831a3  __TI_decompress_lzss             
+0     000831d3  SysCtl_selectOscSource           
+0     00083200  XBAR_setEPWMMuxConfig            
+0     0008322b  __TI_auto_init_nobinit_nopinit   
+0     00083256  C$$EXIT                          
+0     00083256  abort                            
+0     00083258  exit                             
+0     0008327f  LLC_HAL_Handshake_Node           
+0     000832a5  MemCfg_setLSRAMControllerSel     
+0     000832ca  XBAR_setOutputMuxConfig          
+0     000832ef  LLC_slew                         
+0     00083312  fsiRxInt1ISR                     
+0     00083335  GPIO_setQualificationMode        
+0     00083357  fsiTxInt1ISR                     
+0     00083379  GPIO_setDirectionMode            
+0     00083399  LLC_initController               
+0     000833b8  SysCtl_selectXTALSingleEnded     
+0     000833d6  memcpy                           
+0     000833f3  CLA_setTriggerSource             
+0     0008340f  LLC_HAL_setupPWMtoTriggerADCSOC  
+0     0008342a  ADC_setOffsetTrimAll             
+0     00083444  ADC_setVREF                      
+0     0008345d  A0                               
+0     00083475  B0                               
+0     0008348d  C0                               
+0     000834a5  CLB_writeFIFOs                   
+0     000834bd  LLC_HAL_clearTripZoneFlags       
+0     000834d4  _c_int00                         
+0     000834eb  Interrupt_initVectorTable        
+0     00083500  LLC_HAL_setupPWMpins             
+0     00083515  LLC_writeVolatileFloat           
+0     0008352a  LLC_HAL_setupInterrupts          
+0     0008353e  A2                               
+0     00083550  CLB_clearFIFOs                   
+0     00083562  SYNC_init                        
+0     00083573  Device_initGPIO                  
+0     00083583  LLC_HAL_setupCmpssLPTripLimit    
+0     00083593  LLC_HAL_setupCmpssHPTripLimit    
+0     000835a2  LLC_HAL_toggleLED                
+0     000835b0  __TI_zero_init_nomemset          
+0     000835bd  Interrupt_defaultHandler         
+0     000835c9  _args_main                       
+0     000835d5  Board_init                       
+0     000835e0  FSI_executeTxFlushSequence       
+0     000835eb  Interrupt_illegalOperationHandler
+0     000835f5  Interrupt_nmiHandler             
+0     000835ff  LLC_HAL_setupLED                 
+0     00083609  EPWM_setEmulationMode            
+0     00083612  LLC_HAL_disablePWMClkCounting    
+0     0008361b  LLC_HAL_setupDebugGPIO           
+0     00083624  _register_unlock                 
+0     00083628  _register_lock                   
+0     0008362c  _nop                             
+0     0008362d  A1                               
+0     00083635  A3                               
+0     0008363d  B2                               
+0     00083645  LLC_HAL_enablePWMClkCounting     
+0     0008364d  __TI_decompress_none             
+0     0008365d  B1                               
+0     00083663  B3                               
+0     00083669  CPUTimer_setEmulationMode        
+0     0008366f  CLB_init                         
+0     00083674  _system_pre_init                 
+0     00083676  LLC_serviceSFRAGuiSci            
+0     00083677  LLC_setupSFRA                    
+0     00083678  LLC_setupSFRAGui                 
+0     00083679  _system_post_cinit               
+0     00084000  TILE0_HLC_initFIFOData           
+0     00084008  TILE1_HLC_initFIFOData           
+0     00098000  Cla1ProgLoadStart                
+abs   00000000  Cla1ConstLoadSize                
+abs   00000000  isrcodefuncsLoadSize             
+abs   00000000  isrcodefuncsRunSize              
+abs   00000064  RamfuncsLoadSize                 
+abs   00000064  RamfuncsRunSize                  
+abs   00000274  Cla1ProgLoadSize                 
+abs   00000400  __TI_STACK_SIZE                  
+abs   00009800  isrcodefuncsLoadEnd              
+abs   00009800  isrcodefuncsLoadStart            
+abs   00009800  isrcodefuncsRunEnd               
+abs   00009800  isrcodefuncsRunStart             
+abs   0000c000  RamfuncsRunStart                 
+abs   0000c064  RamfuncsRunEnd                   
+abs   00086000  RamfuncsLoadStart                
+abs   00086064  RamfuncsLoadEnd                  
+abs   ffffffff  __TI_pprof_out_hndl              
+abs   ffffffff  __TI_prof_data_size              
+abs   ffffffff  __TI_prof_data_start             
+n/a   UNDEFED   __c_args__                       
+
+[198 symbols]
