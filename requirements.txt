@@ -1,0 +1,7 @@
+Minimum requirements to run this code.
+
+Code Composer 12.6 (IDE)
+Texas Instruments C2000Ware (SDK)
+Texas Instruments Digital Power SDK
+F28003x Control Card and Docking Station (Hardware)
+
